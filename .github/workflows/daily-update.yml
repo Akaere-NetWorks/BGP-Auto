@@ -9,31 +9,30 @@ on:
 jobs:
   update-bgp-config:
     runs-on: self-hosted
-    container:
-      image: ghcr.io/akaere-networks/bgp-container:main-4e8638a
-      credentials:
-        username: ${{ github.actor }}
-        password: ${{ secrets.GITHUB_TOKEN }}
 
     steps:
+      - name: Login to GitHub Container Registry
+        run: |
+          echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
+
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Setup Python virtual environment
+      - name: Run in container
         run: |
-          apt-get update
-          apt-get install -y python3-venv
-          python3 -m venv venv
-          source venv/bin/activate
-          python3 -m pip install --upgrade pip
-          pip3 install -r requirements.txt
-
-      - name: Run BGP Auto Configuration Generator
-        run: |
-          source venv/bin/activate
-          python3 src/main.py
+          docker run --rm \
+            -v $(pwd):/workspace \
+            -w /workspace \
+            ghcr.io/akaere-networks/bgp-container:main-4e8638a \
+            /bin/bash -c "
+              apt-get update && apt-get install -y python3-venv git
+              python3 -m venv venv
+              source venv/bin/activate
+              pip3 install -r requirements.txt
+              python3 src/main.py
+            "
 
       - name: Commit and push changes
         run: |
