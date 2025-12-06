@@ -11,6 +11,9 @@ jobs:
     runs-on: self-hosted
     container:
       image: ghcr.io/akaere-networks/bgp-container:main-4e8638a
+      credentials:
+        username: ${{ github.actor }}
+        password: ${{ secrets.GITHUB_TOKEN }}
 
     steps:
       - name: Checkout repository
