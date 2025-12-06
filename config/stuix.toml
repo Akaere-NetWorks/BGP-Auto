@@ -1,9 +1,19 @@
 [DOWNSTREAM_PREFIX_AS215172]
 enabled = true
 ipv6 = true
-from = "AS215172"
+from = "AS215172:AS-DOWNSTREAM"
 
 [DOWNSTREAM_PREFIX_AS211729]
 enabled = true
 ipv6 = true
 from = "AS211729"
+
+[DOWNSTREAM_PREFIX_AS12198]
+enabled = true
+ipv6 = true
+from = "AS-JSMSR"
+
+[DOWNSTREAM_PREFIX_AS210352]
+enabled = true
+ipv6 = true
+from = "AS210352"

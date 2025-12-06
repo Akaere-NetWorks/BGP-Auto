@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>BGP Auto Report - stuix</title>
+</head>
+<body>
+    <p><a href="index.html">&lt; Back to Index</a></p>
+    <h1>BGP Auto Configuration Report</h1>
+    <p>Generated: 2025-12-06 20:02:20</p>
+    <p>Config: stuix</p>
+    
+    <hr>
+    
+    <h2>Summary</h2>
+    <p>Total Sections: 4</p>
+    <p>Success: 4</p>
+    <p>Failed: 0</p>
+    
+    <hr>
+    
+    <h2>Processing Details</h2>
+    <table border="1">
+        <tr>
+            <th>#</th>
+            <th>Section Name</th>
+            <th>AS Number</th>
+            <th>IPv6</th>
+            <th>Status</th>
+        </tr>
+        
+            <tr>
+                <td>1</td>
+                <td>DOWNSTREAM_PREFIX_AS215172</td>
+                <td>AS215172:AS-DOWNSTREAM</td>
+                <td>Yes</td>
+                <td>✓</td>
+            </tr>
+            
+            <tr>
+                <td>2</td>
+                <td>DOWNSTREAM_PREFIX_AS211729</td>
+                <td>AS211729</td>
+                <td>Yes</td>
+                <td>✓</td>
+            </tr>
+            
+            <tr>
+                <td>3</td>
+                <td>DOWNSTREAM_PREFIX_AS12198</td>
+                <td>AS-JSMSR</td>
+                <td>Yes</td>
+                <td>✓</td>
+            </tr>
+            
+            <tr>
+                <td>4</td>
+                <td>DOWNSTREAM_PREFIX_AS210352</td>
+                <td>AS210352</td>
+                <td>Yes</td>
+                <td>✓</td>
+            </tr>
+            
+    </table>
+    
+    <hr>
+    
+    <h2>Generated Files</h2>
+    <ul>
+        <li><a href="stuix_DOWNSTREAM_PREFIX_AS215172_content.html">DOWNSTREAM_PREFIX_AS215172.conf</a> (1000 bytes)</li>
+<li><a href="stuix_DOWNSTREAM_PREFIX_AS211729_content.html">DOWNSTREAM_PREFIX_AS211729.conf</a> (1032 bytes)</li>
+<li><a href="stuix_DOWNSTREAM_PREFIX_AS12198_content.html">DOWNSTREAM_PREFIX_AS12198.conf</a> (2182 bytes)</li>
+<li><a href="stuix_DOWNSTREAM_PREFIX_AS210352_content.html">DOWNSTREAM_PREFIX_AS210352.conf</a> (782 bytes)</li>
+
+    </ul>
+    
+    <p><strong>Merged File:</strong> <a href="stuix_merged_content.html">filtersprefix.conf</a> (5681 bytes)</p>
+    
+    <hr>
+    
+    <h2>Logs</h2>
+    <pre>
+<div>[INFO] Found 1 config file(s)</div>
+<div>[INFO] 
+======================================================================</div>
+<div>[INFO] Processing config file: stuix.toml</div>
+<div>[INFO] ======================================================================</div>
+<div>[INFO] Found 4 enabled section(s)</div>
+<div>[INFO] 
+Processing: DOWNSTREAM_PREFIX_AS215172</div>
+<div>[INFO]   AS Number: AS215172:AS-DOWNSTREAM</div>
+<div>[INFO]   IPv6: True</div>
+<div>[INFO] Executing command: bgpq4 -6 -b -l define DOWNSTREAM_PREFIX_AS215172 AS215172:AS-DOWNSTREAM</div>
+<div>[INFO] Saved to: /home/pysio/Documents/BGP-Auto/output/stuix/filters/DOWNSTREAM_PREFIX_AS215172.conf</div>
+<div>[INFO] 
+Processing: DOWNSTREAM_PREFIX_AS211729</div>
+<div>[INFO]   AS Number: AS211729</div>
+<div>[INFO]   IPv6: True</div>
+<div>[INFO] Executing command: bgpq4 -6 -b -l define DOWNSTREAM_PREFIX_AS211729 AS211729</div>
+<div>[INFO] Saved to: /home/pysio/Documents/BGP-Auto/output/stuix/filters/DOWNSTREAM_PREFIX_AS211729.conf</div>
+<div>[INFO] 
+Processing: DOWNSTREAM_PREFIX_AS12198</div>
+<div>[INFO]   AS Number: AS-JSMSR</div>
+<div>[INFO]   IPv6: True</div>
+<div>[INFO] Executing command: bgpq4 -6 -b -l define DOWNSTREAM_PREFIX_AS12198 AS-JSMSR</div>
+<div>[INFO] Saved to: /home/pysio/Documents/BGP-Auto/output/stuix/filters/DOWNSTREAM_PREFIX_AS12198.conf</div>
+<div>[INFO] 
+Processing: DOWNSTREAM_PREFIX_AS210352</div>
+<div>[INFO]   AS Number: AS210352</div>
+<div>[INFO]   IPv6: True</div>
+<div>[INFO] Executing command: bgpq4 -6 -b -l define DOWNSTREAM_PREFIX_AS210352 AS210352</div>
+<div>[INFO] Saved to: /home/pysio/Documents/BGP-Auto/output/stuix/filters/DOWNSTREAM_PREFIX_AS210352.conf</div>
+<div>[INFO] 
+Merging 4 file(s)...</div>
+<div>[INFO] Merged to: /home/pysio/Documents/BGP-Auto/output/stuix/filtersprefix.conf</div>
+<div>[SUCCESS] ✓ Config file stuix.toml processed successfully</div>
+<div>[INFO] 
+Generating HTML report...</div>
+
+    </pre>
+    
+    <hr>
+    <p>BGP Auto Configuration Generator</p>
+</body>
+</html>

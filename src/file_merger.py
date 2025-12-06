@@ -6,9 +6,10 @@ from typing import List
 class FileMerger:
     """合并多个配置文件"""
     
-    def __init__(self, output_dir: Path):
+    def __init__(self, output_dir: Path, logger=None):
         self.output_dir = output_dir
         self.filters_dir = output_dir / "filters"
+        self.logger = logger
     
     def merge_files(self, file_list: List[Path], output_filename: str = "filtersprefix.conf") -> Path:
         """
@@ -26,7 +27,10 @@ class FileMerger:
         with open(output_file, 'w') as out_f:
             for i, file_path in enumerate(file_list):
                 if not file_path.exists():
-                    print(f"Warning: File does not exist {file_path}")
+                    if self.logger:
+                        self.logger.warning(f"File does not exist {file_path}")
+                    else:
+                        print(f"Warning: File does not exist {file_path}")
                     continue
                 
                 # Add separator comments
@@ -45,5 +49,8 @@ class FileMerger:
                     if not content.endswith('\n'):
                         out_f.write('\n')
         
-        print(f"Merged to: {output_file}")
+        if self.logger:
+            self.logger.info(f"Merged to: {output_file}")
+        else:
+            print(f"Merged to: {output_file}")
         return output_file

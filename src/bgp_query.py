@@ -7,10 +7,11 @@ from typing import Optional
 class BGPQuery:
     """执行bgpq4命令并保存结果"""
     
-    def __init__(self, output_dir: Path):
+    def __init__(self, output_dir: Path, logger=None):
         self.output_dir = output_dir
         self.filters_dir = output_dir / "filters"
         self.filters_dir.mkdir(parents=True, exist_ok=True)
+        self.logger = logger
     
     def execute_query(self, section_name: str, as_number: str, ipv6: bool = False) -> Optional[Path]:
         """
@@ -33,7 +34,11 @@ class BGPQuery:
         cmd.extend(["-b", "-l", f"define {section_name}", as_number])
         
         try:
-            print(f"Executing command: {' '.join(cmd)}")
+            if self.logger:
+                self.logger.info(f"Executing command: {' '.join(cmd)}")
+            else:
+                print(f"Executing command: {' '.join(cmd)}")
+            
             result = subprocess.run(
                 cmd,
                 capture_output=True,
@@ -45,13 +50,23 @@ class BGPQuery:
             with open(output_file, 'w') as f:
                 f.write(result.stdout)
             
-            print(f"Saved to: {output_file}")
+            if self.logger:
+                self.logger.info(f"Saved to: {output_file}")
+            else:
+                print(f"Saved to: {output_file}")
             return output_file
             
         except subprocess.CalledProcessError as e:
-            print(f"Execution failed: {e}")
-            print(f"Error output: {e.stderr}")
+            if self.logger:
+                self.logger.error(f"Execution failed: {e}")
+                self.logger.error(f"Error output: {e.stderr}")
+            else:
+                print(f"Execution failed: {e}")
+                print(f"Error output: {e.stderr}")
             return None
         except FileNotFoundError:
-            print("Error: bgpq4 command not found, please ensure it is installed")
+            if self.logger:
+                self.logger.error("bgpq4 command not found, please ensure it is installed")
+            else:
+                print("Error: bgpq4 command not found, please ensure it is installed")
             return None

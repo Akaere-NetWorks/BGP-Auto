@@ -5,6 +5,8 @@ from pathlib import Path
 from config_parser import ConfigParser
 from bgp_query import BGPQuery
 from file_merger import FileMerger
+from logger import Logger
+from html_generator import HTMLGenerator
 
 
 def main():
@@ -13,37 +15,51 @@ def main():
     project_root = Path(__file__).parent.parent
     config_dir = project_root / "config"
     output_dir = project_root / "output"
+    log_dir = project_root / "logs"
+    
+    # Initialize logger
+    logger = Logger(log_dir=log_dir)
     
     # Check config directory
     if not config_dir.exists():
-        print(f"Error: Config directory does not exist {config_dir}")
+        logger.error(f"Config directory does not exist {config_dir}")
         sys.exit(1)
     
     # Get all .toml config files
     config_files = list(config_dir.glob("*.toml"))
     
     if not config_files:
-        print(f"Error: No .toml config files found in {config_dir}")
+        logger.error(f"No .toml config files found in {config_dir}")
         sys.exit(1)
     
-    print(f"Found {len(config_files)} config file(s)")
+    logger.info(f"Found {len(config_files)} config file(s)")
+    
+    # Initialize HTML generator
+    html_gen = HTMLGenerator(project_root)
     
     # 处理每个配置文件
     for config_file in config_files:
-        process_config_file(config_file, output_dir)
+        process_config_file(config_file, output_dir, logger, html_gen)
+    
+    # Generate main index page
+    logger.info("\nGenerating main index page...")
+    index_file = html_gen.generate_index()
+    logger.info(f"Main index saved to: {index_file}")
 
 
-def process_config_file(config_file: Path, output_base_dir: Path):
+def process_config_file(config_file: Path, output_base_dir: Path, logger: Logger, html_gen: HTMLGenerator):
     """
     处理单个配置文件
     
     Args:
         config_file: 配置文件路径
         output_base_dir: 输出基础目录
+        logger: Logger instance
+        html_gen: HTMLGenerator instance
     """
-    print(f"\n{'='*70}")
-    print(f"Processing config file: {config_file.name}")
-    print(f"{'='*70}")
+    logger.info(f"\n{'='*70}")
+    logger.info(f"Processing config file: {config_file.name}")
+    logger.info(f"{'='*70}")
     
     # 根据配置文件名创建输出目录 (去掉.toml后缀)
     config_name = config_file.stem
@@ -55,25 +71,25 @@ def process_config_file(config_file: Path, output_base_dir: Path):
     try:
         parser.load_config()
     except Exception as e:
-        print(f"Error: Failed to load config file: {e}")
+        logger.error(f"Failed to load config file: {e}")
         return
     
     enabled_sections = parser.get_enabled_sections()
     
     if not enabled_sections:
-        print(f"Warning: No enabled sections in config file {config_file.name}")
+        logger.warning(f"No enabled sections in config file {config_file.name}")
         return
     
-    print(f"Found {len(enabled_sections)} enabled section(s)")
+    logger.info(f"Found {len(enabled_sections)} enabled section(s)")
     
     # 执行BGP查询
-    bgp_query = BGPQuery(output_dir)
+    bgp_query = BGPQuery(output_dir, logger)
     generated_files = []
     
     for section in enabled_sections:
-        print(f"\nProcessing: {section['name']}")
-        print(f"  AS Number: {section['from']}")
-        print(f"  IPv6: {section['ipv6']}")
+        logger.info(f"\nProcessing: {section['name']}")
+        logger.info(f"  AS Number: {section['from']}")
+        logger.info(f"  IPv6: {section['ipv6']}")
         
         output_file = bgp_query.execute_query(
             section_name=section['name'],
@@ -85,13 +101,25 @@ def process_config_file(config_file: Path, output_base_dir: Path):
             generated_files.append(output_file)
     
     # Merge files
+    merge_file = None
     if generated_files:
-        print(f"\nMerging {len(generated_files)} file(s)...")
-        merger = FileMerger(output_dir)
-        merger.merge_files(generated_files)
-        print(f"\n✓ Config file {config_file.name} processed successfully")
+        logger.info(f"\nMerging {len(generated_files)} file(s)...")
+        merger = FileMerger(output_dir, logger)
+        merge_file = merger.merge_files(generated_files)
+        logger.success(f"Config file {config_file.name} processed successfully")
     else:
-        print(f"\nWarning: No files were generated")
+        logger.warning(f"No files were generated")
+    
+    # Generate HTML report
+    logger.info(f"\nGenerating HTML report...")
+    html_file = html_gen.generate_report(
+        config_name=config_name,
+        sections=enabled_sections,
+        generated_files=generated_files,
+        merge_file=merge_file,
+        logs=logger.get_logs()
+    )
+    logger.info(f"HTML detail page saved to: {html_file}")
 
 
 if __name__ == "__main__":
