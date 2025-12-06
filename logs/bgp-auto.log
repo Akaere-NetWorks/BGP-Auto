@@ -1,40 +1,40 @@
-2025-12-06 20:02:13,806 - INFO - Found 1 config file(s)
-2025-12-06 20:02:13,806 - INFO - 
+2025-12-06 12:22:27,841 - INFO - Found 1 config file(s)
+2025-12-06 12:22:27,842 - INFO - 
 ======================================================================
-2025-12-06 20:02:13,806 - INFO - Processing config file: stuix.toml
-2025-12-06 20:02:13,806 - INFO - ======================================================================
-2025-12-06 20:02:13,806 - INFO - Found 4 enabled section(s)
-2025-12-06 20:02:13,806 - INFO - 
+2025-12-06 12:22:27,842 - INFO - Processing config file: stuix.toml
+2025-12-06 12:22:27,843 - INFO - ======================================================================
+2025-12-06 12:22:27,844 - INFO - Found 4 enabled section(s)
+2025-12-06 12:22:27,844 - INFO - 
 Processing: DOWNSTREAM_PREFIX_AS215172
-2025-12-06 20:02:13,806 - INFO -   AS Number: AS215172:AS-DOWNSTREAM
-2025-12-06 20:02:13,807 - INFO -   IPv6: True
-2025-12-06 20:02:13,807 - INFO - Executing command: bgpq4 -6 -b -l define DOWNSTREAM_PREFIX_AS215172 AS215172:AS-DOWNSTREAM
-2025-12-06 20:02:15,453 - INFO - Saved to: /home/pysio/Documents/BGP-Auto/output/stuix/filters/DOWNSTREAM_PREFIX_AS215172.conf
-2025-12-06 20:02:15,453 - INFO - 
+2025-12-06 12:22:27,844 - INFO -   AS Number: AS215172:AS-DOWNSTREAM
+2025-12-06 12:22:27,844 - INFO -   IPv6: True
+2025-12-06 12:22:27,844 - INFO - Executing command: bgpq4 -6 -b -l define DOWNSTREAM_PREFIX_AS215172 AS215172:AS-DOWNSTREAM
+2025-12-06 12:22:29,147 - INFO - Saved to: /__w/BGP-Auto/BGP-Auto/output/stuix/filters/DOWNSTREAM_PREFIX_AS215172.conf
+2025-12-06 12:22:29,148 - INFO - 
 Processing: DOWNSTREAM_PREFIX_AS211729
-2025-12-06 20:02:15,453 - INFO -   AS Number: AS211729
-2025-12-06 20:02:15,453 - INFO -   IPv6: True
-2025-12-06 20:02:15,453 - INFO - Executing command: bgpq4 -6 -b -l define DOWNSTREAM_PREFIX_AS211729 AS211729
-2025-12-06 20:02:16,851 - INFO - Saved to: /home/pysio/Documents/BGP-Auto/output/stuix/filters/DOWNSTREAM_PREFIX_AS211729.conf
-2025-12-06 20:02:16,851 - INFO - 
+2025-12-06 12:22:29,148 - INFO -   AS Number: AS211729
+2025-12-06 12:22:29,148 - INFO -   IPv6: True
+2025-12-06 12:22:29,148 - INFO - Executing command: bgpq4 -6 -b -l define DOWNSTREAM_PREFIX_AS211729 AS211729
+2025-12-06 12:22:30,220 - INFO - Saved to: /__w/BGP-Auto/BGP-Auto/output/stuix/filters/DOWNSTREAM_PREFIX_AS211729.conf
+2025-12-06 12:22:30,220 - INFO - 
 Processing: DOWNSTREAM_PREFIX_AS12198
-2025-12-06 20:02:16,851 - INFO -   AS Number: AS-JSMSR
-2025-12-06 20:02:16,851 - INFO -   IPv6: True
-2025-12-06 20:02:16,851 - INFO - Executing command: bgpq4 -6 -b -l define DOWNSTREAM_PREFIX_AS12198 AS-JSMSR
-2025-12-06 20:02:18,468 - INFO - Saved to: /home/pysio/Documents/BGP-Auto/output/stuix/filters/DOWNSTREAM_PREFIX_AS12198.conf
-2025-12-06 20:02:18,468 - INFO - 
+2025-12-06 12:22:30,220 - INFO -   AS Number: AS-JSMSR
+2025-12-06 12:22:30,220 - INFO -   IPv6: True
+2025-12-06 12:22:30,220 - INFO - Executing command: bgpq4 -6 -b -l define DOWNSTREAM_PREFIX_AS12198 AS-JSMSR
+2025-12-06 12:22:31,451 - INFO - Saved to: /__w/BGP-Auto/BGP-Auto/output/stuix/filters/DOWNSTREAM_PREFIX_AS12198.conf
+2025-12-06 12:22:31,451 - INFO - 
 Processing: DOWNSTREAM_PREFIX_AS210352
-2025-12-06 20:02:18,468 - INFO -   AS Number: AS210352
-2025-12-06 20:02:18,468 - INFO -   IPv6: True
-2025-12-06 20:02:18,468 - INFO - Executing command: bgpq4 -6 -b -l define DOWNSTREAM_PREFIX_AS210352 AS210352
-2025-12-06 20:02:20,105 - INFO - Saved to: /home/pysio/Documents/BGP-Auto/output/stuix/filters/DOWNSTREAM_PREFIX_AS210352.conf
-2025-12-06 20:02:20,105 - INFO - 
+2025-12-06 12:22:31,451 - INFO -   AS Number: AS210352
+2025-12-06 12:22:31,452 - INFO -   IPv6: True
+2025-12-06 12:22:31,452 - INFO - Executing command: bgpq4 -6 -b -l define DOWNSTREAM_PREFIX_AS210352 AS210352
+2025-12-06 12:22:32,533 - INFO - Saved to: /__w/BGP-Auto/BGP-Auto/output/stuix/filters/DOWNSTREAM_PREFIX_AS210352.conf
+2025-12-06 12:22:32,533 - INFO - 
 Merging 4 file(s)...
-2025-12-06 20:02:20,106 - INFO - Merged to: /home/pysio/Documents/BGP-Auto/output/stuix/filtersprefix.conf
-2025-12-06 20:02:20,106 - INFO - ✓ Config file stuix.toml processed successfully
-2025-12-06 20:02:20,106 - INFO - 
+2025-12-06 12:22:32,534 - INFO - Merged to: /__w/BGP-Auto/BGP-Auto/output/stuix/filtersprefix.conf
+2025-12-06 12:22:32,535 - INFO - ✓ Config file stuix.toml processed successfully
+2025-12-06 12:22:32,535 - INFO - 
 Generating HTML report...
-2025-12-06 20:02:20,106 - INFO - HTML detail page saved to: /home/pysio/Documents/BGP-Auto/html/stuix_detail.html
-2025-12-06 20:02:20,106 - INFO - 
+2025-12-06 12:22:32,538 - INFO - HTML detail page saved to: /__w/BGP-Auto/BGP-Auto/html/stuix_detail.html
+2025-12-06 12:22:32,538 - INFO - 
 Generating main index page...
-2025-12-06 20:02:20,106 - INFO - Main index saved to: /home/pysio/Documents/BGP-Auto/html/index.html
+2025-12-06 12:22:32,539 - INFO - Main index saved to: /__w/BGP-Auto/BGP-Auto/html/index.html
