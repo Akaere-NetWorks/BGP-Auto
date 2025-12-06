@@ -1,0 +1,43 @@
+name: Daily BGP Configuration Update
+
+on:
+  schedule:
+    # Run every day at 00:00 UTC
+    - cron: "0 0 * * *"
+  workflow_dispatch: # Allow manual trigger
+
+jobs:
+  update-bgp-config:
+    runs-on: self-hosted
+    container:
+      image: ghcr.io/akaere-networks/bgp-container:main-4e8638a
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Python virtual environment
+        run: |
+          apt-get update
+          apt-get install -y python3-venv
+          python3 -m venv venv
+          source venv/bin/activate
+          python3 -m pip install --upgrade pip
+          pip3 install -r requirements.txt
+
+      - name: Run BGP Auto Configuration Generator
+        run: |
+          source venv/bin/activate
+          python3 src/main.py
+
+      - name: Commit and push changes
+        run: |
+          git config --global user.name "GitHub Actions Bot"
+          git config --global user.email "actions@github.com"
+          git add output/ html/ logs/
+          git diff --staged --quiet || git commit -m "chore: daily BGP configuration update [$(date -u +%Y-%m-%d)]"
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
