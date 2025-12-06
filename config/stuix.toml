@@ -1,0 +1,9 @@
+[DOWNSTREAM_PREFIX_AS215172]
+enabled = true
+ipv6 = true
+from = "AS215172"
+
+[DOWNSTREAM_PREFIX_AS211729]
+enabled = true
+ipv6 = true
+from = "AS211729"
