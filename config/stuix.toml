@@ -3,6 +3,11 @@ enabled = true
 ipv6 = true
 from = "AS215172:AS-DOWNSTREAM"
 
+[DOWNSTREAM_PREFIX_AS215172_IPV4]
+enabled = true
+ipv6 = false
+from = "AS215172"
+
 [DOWNSTREAM_PREFIX_AS211729]
 enabled = true
 ipv6 = true
