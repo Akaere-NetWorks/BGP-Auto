@@ -7,14 +7,14 @@
 <body>
     <p><a href="index.html">&lt; Back to Index</a></p>
     <h1>BGP Auto Configuration Report</h1>
-    <p>Generated: 2025-12-06 12:22:32</p>
+    <p>Generated: 2025-12-07 18:47:02</p>
     <p>Config: stuix</p>
     
     <hr>
     
     <h2>Summary</h2>
-    <p>Total Sections: 4</p>
-    <p>Success: 4</p>
+    <p>Total Sections: 5</p>
+    <p>Success: 5</p>
     <p>Failed: 0</p>
     
     <hr>
@@ -39,6 +39,14 @@
             
             <tr>
                 <td>2</td>
+                <td>DOWNSTREAM_PREFIX_AS215172_IPV4</td>
+                <td>AS215172</td>
+                <td>No</td>
+                <td>✓</td>
+            </tr>
+            
+            <tr>
+                <td>3</td>
                 <td>DOWNSTREAM_PREFIX_AS211729</td>
                 <td>AS211729</td>
                 <td>Yes</td>
@@ -46,7 +54,7 @@
             </tr>
             
             <tr>
-                <td>3</td>
+                <td>4</td>
                 <td>DOWNSTREAM_PREFIX_AS12198</td>
                 <td>AS-JSMSR</td>
                 <td>Yes</td>
@@ -54,7 +62,7 @@
             </tr>
             
             <tr>
-                <td>4</td>
+                <td>5</td>
                 <td>DOWNSTREAM_PREFIX_AS210352</td>
                 <td>AS210352</td>
                 <td>Yes</td>
@@ -67,14 +75,15 @@
     
     <h2>Generated Files</h2>
     <ul>
-        <li><a href="stuix_DOWNSTREAM_PREFIX_AS215172_content.html">DOWNSTREAM_PREFIX_AS215172.conf</a> (1000 bytes)</li>
+        <li><a href="stuix_DOWNSTREAM_PREFIX_AS215172_content.html">DOWNSTREAM_PREFIX_AS215172.conf</a> (975 bytes)</li>
+<li><a href="stuix_DOWNSTREAM_PREFIX_AS215172_IPV4_content.html">DOWNSTREAM_PREFIX_AS215172_IPV4.conf</a> (0 bytes)</li>
 <li><a href="stuix_DOWNSTREAM_PREFIX_AS211729_content.html">DOWNSTREAM_PREFIX_AS211729.conf</a> (1032 bytes)</li>
 <li><a href="stuix_DOWNSTREAM_PREFIX_AS12198_content.html">DOWNSTREAM_PREFIX_AS12198.conf</a> (2182 bytes)</li>
-<li><a href="stuix_DOWNSTREAM_PREFIX_AS210352_content.html">DOWNSTREAM_PREFIX_AS210352.conf</a> (782 bytes)</li>
+<li><a href="stuix_DOWNSTREAM_PREFIX_AS210352_content.html">DOWNSTREAM_PREFIX_AS210352.conf</a> (757 bytes)</li>
 
     </ul>
     
-    <p><strong>Merged File:</strong> <a href="stuix_merged_content.html">filtersprefix.conf</a> (5681 bytes)</p>
+    <p><strong>Merged File:</strong> <a href="stuix_merged_content.html">filtersprefix.conf</a> (5827 bytes)</p>
     
     <hr>
     
@@ -85,13 +94,19 @@
 ======================================================================</div>
 <div>[INFO] Processing config file: stuix.toml</div>
 <div>[INFO] ======================================================================</div>
-<div>[INFO] Found 4 enabled section(s)</div>
+<div>[INFO] Found 5 enabled section(s)</div>
 <div>[INFO] 
 Processing: DOWNSTREAM_PREFIX_AS215172</div>
 <div>[INFO]   AS Number: AS215172:AS-DOWNSTREAM</div>
 <div>[INFO]   IPv6: True</div>
 <div>[INFO] Executing command: bgpq4 -6 -b -l define DOWNSTREAM_PREFIX_AS215172 AS215172:AS-DOWNSTREAM</div>
 <div>[INFO] Saved to: /__w/BGP-Auto/BGP-Auto/output/stuix/filters/DOWNSTREAM_PREFIX_AS215172.conf</div>
+<div>[INFO] 
+Processing: DOWNSTREAM_PREFIX_AS215172_IPV4</div>
+<div>[INFO]   AS Number: AS215172</div>
+<div>[INFO]   IPv6: False</div>
+<div>[INFO] Executing command: bgpq4 -b -l define DOWNSTREAM_PREFIX_AS215172_IPV4 AS215172</div>
+<div>[INFO] Saved to: /__w/BGP-Auto/BGP-Auto/output/stuix/filters/DOWNSTREAM_PREFIX_AS215172_IPV4.conf</div>
 <div>[INFO] 
 Processing: DOWNSTREAM_PREFIX_AS211729</div>
 <div>[INFO]   AS Number: AS211729</div>
@@ -111,7 +126,7 @@ Processing: DOWNSTREAM_PREFIX_AS210352</div>
 <div>[INFO] Executing command: bgpq4 -6 -b -l define DOWNSTREAM_PREFIX_AS210352 AS210352</div>
 <div>[INFO] Saved to: /__w/BGP-Auto/BGP-Auto/output/stuix/filters/DOWNSTREAM_PREFIX_AS210352.conf</div>
 <div>[INFO] 
-Merging 4 file(s)...</div>
+Merging 5 file(s)...</div>
 <div>[INFO] Merged to: /__w/BGP-Auto/BGP-Auto/output/stuix/filtersprefix.conf</div>
 <div>[SUCCESS] ✓ Config file stuix.toml processed successfully</div>
 <div>[INFO] 
