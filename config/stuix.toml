@@ -22,3 +22,13 @@ from = "AS-JSMSR"
 enabled = true
 ipv6 = true
 from = "AS210352"
+
+[DOWNSTREAM_PREFIX_AS204539_IPV4]
+enabled = true
+ipv6 = false
+from = "AS-AXIC"
+
+[DOWNSTREAM_PREFIX_AS204539_IPV46]
+enabled = true
+ipv6 = true
+from = "AS-AXIC"
