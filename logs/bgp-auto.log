@@ -1,46 +1,58 @@
-2025-12-16 01:42:38,785 - INFO - Found 1 config file(s)
-2025-12-16 01:42:38,786 - INFO - 
+2025-12-16 19:17:06,842 - INFO - Found 1 config file(s)
+2025-12-16 19:17:06,842 - INFO - 
 ======================================================================
-2025-12-16 01:42:38,787 - INFO - Processing config file: stuix.toml
-2025-12-16 01:42:38,788 - INFO - ======================================================================
-2025-12-16 01:42:38,789 - INFO - Found 5 enabled section(s)
-2025-12-16 01:42:38,790 - INFO - 
+2025-12-16 19:17:06,842 - INFO - Processing config file: stuix.toml
+2025-12-16 19:17:06,842 - INFO - ======================================================================
+2025-12-16 19:17:06,842 - INFO - Found 7 enabled section(s)
+2025-12-16 19:17:06,842 - INFO - 
 Processing: DOWNSTREAM_PREFIX_AS215172
-2025-12-16 01:42:38,791 - INFO -   AS Number: AS215172:AS-DOWNSTREAM
-2025-12-16 01:42:38,791 - INFO -   IPv6: True
-2025-12-16 01:42:38,792 - INFO - Executing command: bgpq4 -6 -b -l define DOWNSTREAM_PREFIX_AS215172 AS215172:AS-DOWNSTREAM
-2025-12-16 01:42:39,904 - INFO - Saved to: /__w/BGP-Auto/BGP-Auto/output/stuix/filters/DOWNSTREAM_PREFIX_AS215172.conf
-2025-12-16 01:42:39,904 - INFO - 
+2025-12-16 19:17:06,842 - INFO -   AS Number: AS215172:AS-DOWNSTREAM
+2025-12-16 19:17:06,842 - INFO -   IPv6: True
+2025-12-16 19:17:06,842 - INFO - Executing command: bgpq4 -6 -b -l define DOWNSTREAM_PREFIX_AS215172 AS215172:AS-DOWNSTREAM
+2025-12-16 19:17:08,040 - INFO - Saved to: /__w/BGP-Auto/BGP-Auto/output/stuix/filters/DOWNSTREAM_PREFIX_AS215172.conf
+2025-12-16 19:17:08,040 - INFO - 
 Processing: DOWNSTREAM_PREFIX_AS215172_IPV4
-2025-12-16 01:42:39,904 - INFO -   AS Number: AS215172
-2025-12-16 01:42:39,904 - INFO -   IPv6: False
-2025-12-16 01:42:39,904 - INFO - Executing command: bgpq4 -b -l define DOWNSTREAM_PREFIX_AS215172_IPV4 AS215172
-2025-12-16 01:42:40,941 - INFO - Saved to: /__w/BGP-Auto/BGP-Auto/output/stuix/filters/DOWNSTREAM_PREFIX_AS215172_IPV4.conf
-2025-12-16 01:42:40,941 - INFO - 
+2025-12-16 19:17:08,040 - INFO -   AS Number: AS215172
+2025-12-16 19:17:08,040 - INFO -   IPv6: False
+2025-12-16 19:17:08,040 - INFO - Executing command: bgpq4 -b -l define DOWNSTREAM_PREFIX_AS215172_IPV4 AS215172
+2025-12-16 19:17:09,142 - INFO - Saved to: /__w/BGP-Auto/BGP-Auto/output/stuix/filters/DOWNSTREAM_PREFIX_AS215172_IPV4.conf
+2025-12-16 19:17:09,142 - INFO - 
 Processing: DOWNSTREAM_PREFIX_AS211729
-2025-12-16 01:42:40,941 - INFO -   AS Number: AS211729
-2025-12-16 01:42:40,941 - INFO -   IPv6: True
-2025-12-16 01:42:40,941 - INFO - Executing command: bgpq4 -6 -b -l define DOWNSTREAM_PREFIX_AS211729 AS211729
-2025-12-16 01:42:41,957 - INFO - Saved to: /__w/BGP-Auto/BGP-Auto/output/stuix/filters/DOWNSTREAM_PREFIX_AS211729.conf
-2025-12-16 01:42:41,957 - INFO - 
+2025-12-16 19:17:09,142 - INFO -   AS Number: AS211729
+2025-12-16 19:17:09,142 - INFO -   IPv6: True
+2025-12-16 19:17:09,142 - INFO - Executing command: bgpq4 -6 -b -l define DOWNSTREAM_PREFIX_AS211729 AS211729
+2025-12-16 19:17:10,192 - INFO - Saved to: /__w/BGP-Auto/BGP-Auto/output/stuix/filters/DOWNSTREAM_PREFIX_AS211729.conf
+2025-12-16 19:17:10,193 - INFO - 
 Processing: DOWNSTREAM_PREFIX_AS12198
-2025-12-16 01:42:41,957 - INFO -   AS Number: AS-JSMSR
-2025-12-16 01:42:41,957 - INFO -   IPv6: True
-2025-12-16 01:42:41,957 - INFO - Executing command: bgpq4 -6 -b -l define DOWNSTREAM_PREFIX_AS12198 AS-JSMSR
-2025-12-16 01:42:43,205 - INFO - Saved to: /__w/BGP-Auto/BGP-Auto/output/stuix/filters/DOWNSTREAM_PREFIX_AS12198.conf
-2025-12-16 01:42:43,205 - INFO - 
+2025-12-16 19:17:10,193 - INFO -   AS Number: AS-JSMSR
+2025-12-16 19:17:10,193 - INFO -   IPv6: True
+2025-12-16 19:17:10,193 - INFO - Executing command: bgpq4 -6 -b -l define DOWNSTREAM_PREFIX_AS12198 AS-JSMSR
+2025-12-16 19:17:11,413 - INFO - Saved to: /__w/BGP-Auto/BGP-Auto/output/stuix/filters/DOWNSTREAM_PREFIX_AS12198.conf
+2025-12-16 19:17:11,414 - INFO - 
 Processing: DOWNSTREAM_PREFIX_AS210352
-2025-12-16 01:42:43,206 - INFO -   AS Number: AS210352
-2025-12-16 01:42:43,206 - INFO -   IPv6: True
-2025-12-16 01:42:43,206 - INFO - Executing command: bgpq4 -6 -b -l define DOWNSTREAM_PREFIX_AS210352 AS210352
-2025-12-16 01:42:44,236 - INFO - Saved to: /__w/BGP-Auto/BGP-Auto/output/stuix/filters/DOWNSTREAM_PREFIX_AS210352.conf
-2025-12-16 01:42:44,236 - INFO - 
-Merging 5 file(s)...
-2025-12-16 01:42:44,236 - INFO - Merged to: /__w/BGP-Auto/BGP-Auto/output/stuix/filtersprefix.conf
-2025-12-16 01:42:44,237 - INFO - ✓ Config file stuix.toml processed successfully
-2025-12-16 01:42:44,237 - INFO - 
+2025-12-16 19:17:11,414 - INFO -   AS Number: AS210352
+2025-12-16 19:17:11,414 - INFO -   IPv6: True
+2025-12-16 19:17:11,414 - INFO - Executing command: bgpq4 -6 -b -l define DOWNSTREAM_PREFIX_AS210352 AS210352
+2025-12-16 19:17:12,513 - INFO - Saved to: /__w/BGP-Auto/BGP-Auto/output/stuix/filters/DOWNSTREAM_PREFIX_AS210352.conf
+2025-12-16 19:17:12,513 - INFO - 
+Processing: DOWNSTREAM_PREFIX_AS204539_IPV4
+2025-12-16 19:17:12,514 - INFO -   AS Number: AS-AXIC
+2025-12-16 19:17:12,514 - INFO -   IPv6: False
+2025-12-16 19:17:12,514 - INFO - Executing command: bgpq4 -b -l define DOWNSTREAM_PREFIX_AS204539_IPV4 AS-AXIC
+2025-12-16 19:17:13,596 - INFO - Saved to: /__w/BGP-Auto/BGP-Auto/output/stuix/filters/DOWNSTREAM_PREFIX_AS204539_IPV4.conf
+2025-12-16 19:17:13,597 - INFO - 
+Processing: DOWNSTREAM_PREFIX_AS204539_IPV46
+2025-12-16 19:17:13,597 - INFO -   AS Number: AS-AXIC
+2025-12-16 19:17:13,597 - INFO -   IPv6: True
+2025-12-16 19:17:13,597 - INFO - Executing command: bgpq4 -6 -b -l define DOWNSTREAM_PREFIX_AS204539_IPV46 AS-AXIC
+2025-12-16 19:17:14,694 - INFO - Saved to: /__w/BGP-Auto/BGP-Auto/output/stuix/filters/DOWNSTREAM_PREFIX_AS204539_IPV46.conf
+2025-12-16 19:17:14,694 - INFO - 
+Merging 7 file(s)...
+2025-12-16 19:17:14,694 - INFO - Merged to: /__w/BGP-Auto/BGP-Auto/output/stuix/filtersprefix.conf
+2025-12-16 19:17:14,695 - INFO - ✓ Config file stuix.toml processed successfully
+2025-12-16 19:17:14,695 - INFO - 
 Generating HTML report...
-2025-12-16 01:42:44,240 - INFO - HTML detail page saved to: /__w/BGP-Auto/BGP-Auto/html/stuix_detail.html
-2025-12-16 01:42:44,241 - INFO - 
+2025-12-16 19:17:14,700 - INFO - HTML detail page saved to: /__w/BGP-Auto/BGP-Auto/html/stuix_detail.html
+2025-12-16 19:17:14,701 - INFO - 
 Generating main index page...
-2025-12-16 01:42:44,241 - INFO - Main index saved to: /__w/BGP-Auto/BGP-Auto/html/index.html
+2025-12-16 19:17:14,702 - INFO - Main index saved to: /__w/BGP-Auto/BGP-Auto/html/index.html
