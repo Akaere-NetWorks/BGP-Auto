@@ -32,3 +32,18 @@ from = "AS-AXIC"
 enabled = true
 ipv6 = true
 from = "AS-AXIC"
+
+[DOWNSTREAM_PREFIX_AS140915]
+enabled = true
+ipv6 = true
+from = "AS140915:AS-MKNT"
+
+[DOWNSTREAM_PREFIX_AS216299]
+enabled = true
+ipv6 = true
+from = "AS216299"
+
+[DOWNSTREAM_PREFIX_AS154185]
+enabled = true
+ipv6 = true
+from = "AS154185"
