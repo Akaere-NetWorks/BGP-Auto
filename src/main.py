@@ -7,6 +7,7 @@ from bgp_query import BGPQuery
 from file_merger import FileMerger
 from logger import Logger
 from html_generator import HTMLGenerator
+from diff_generator import DiffGenerator
 
 
 def main():
@@ -120,6 +121,26 @@ def process_config_file(config_file: Path, output_base_dir: Path, logger: Logger
         logs=logger.get_logs()
     )
     logger.info(f"HTML detail page saved to: {html_file}")
+
+    # Generate route diffs
+    logger.info(f"\nGenerating route change diffs...")
+    try:
+        diff_gen = DiffGenerator(output_base_dir, history_count=5, logger=logger)
+        all_diffs = diff_gen.generate_all_diffs(config_name, enabled_sections)
+        merged_diffs = diff_gen.generate_merged_diff(config_name)
+
+        if all_diffs or merged_diffs:
+            html_gen.generate_diff_pages(
+                config_name=config_name,
+                sections=enabled_sections,
+                all_diffs=all_diffs,
+                merged_diffs=merged_diffs
+            )
+            logger.success(f"Diff pages generated for {config_name}")
+        else:
+            logger.info(f"No git history found for {config_name}, skipping diff generation")
+    except Exception as e:
+        logger.warning(f"Failed to generate diffs: {e}")
 
 
 if __name__ == "__main__":
