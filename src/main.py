@@ -40,7 +40,7 @@ def main():
     
     # 处理每个配置文件
     for config_file in config_files:
-        process_config_file(config_file, output_dir, logger, html_gen)
+        process_config_file(config_file, output_dir, logger, html_gen, project_root)
     
     # Generate main index page
     logger.info("\nGenerating main index page...")
@@ -48,15 +48,16 @@ def main():
     logger.info(f"Main index saved to: {index_file}")
 
 
-def process_config_file(config_file: Path, output_base_dir: Path, logger: Logger, html_gen: HTMLGenerator):
+def process_config_file(config_file: Path, output_base_dir: Path, logger: Logger, html_gen: HTMLGenerator, project_root: Path = None):
     """
     处理单个配置文件
-    
+
     Args:
         config_file: 配置文件路径
         output_base_dir: 输出基础目录
         logger: Logger instance
         html_gen: HTMLGenerator instance
+        project_root: 项目根目录 (用于git操作)
     """
     logger.info(f"\n{'='*70}")
     logger.info(f"Processing config file: {config_file.name}")
@@ -125,7 +126,7 @@ def process_config_file(config_file: Path, output_base_dir: Path, logger: Logger
     # Generate route diffs
     logger.info(f"\nGenerating route change diffs...")
     try:
-        diff_gen = DiffGenerator(output_base_dir, history_count=5, logger=logger)
+        diff_gen = DiffGenerator(project_root, history_count=5, logger=logger)
         all_diffs = diff_gen.generate_all_diffs(config_name, enabled_sections)
         merged_diffs = diff_gen.generate_merged_diff(config_name)
 

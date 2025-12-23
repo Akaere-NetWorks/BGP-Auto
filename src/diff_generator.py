@@ -2,6 +2,7 @@
 import subprocess
 from pathlib import Path
 from typing import List, Dict, Optional
+from datetime import datetime
 
 
 class DiffGenerator:
@@ -35,12 +36,19 @@ class DiffGenerator:
         if count is None:
             count = self.history_count
 
+        # Convert to relative path from project root
+        try:
+            rel_path = file_path.relative_to(self.project_root)
+        except ValueError:
+            # file_path is not relative to project_root, use as-is
+            rel_path = file_path
+
         try:
             cmd = [
                 "git", "log",
                 f"-{count}",
                 "--pretty=format:%H|%ai|%an|%s",
-                "--", str(file_path)
+                "--", str(rel_path)
             ]
 
             result = subprocess.run(
@@ -85,8 +93,14 @@ class DiffGenerator:
         Returns:
             File content as string, or None if not found
         """
+        # Convert to relative path from project root
         try:
-            cmd = ["git", "show", f"{commit_hash}:{file_path}"]
+            rel_path = file_path.relative_to(self.project_root)
+        except ValueError:
+            rel_path = file_path
+
+        try:
+            cmd = ["git", "show", f"{commit_hash}:{rel_path}"]
 
             result = subprocess.run(
                 cmd,
@@ -114,22 +128,32 @@ class DiffGenerator:
         Returns:
             Set of route prefixes
         """
+        import re
         routes = set()
+
         for line in content.split('\n'):
             line = line.strip()
-            # Match route prefixes (IPv4 and IPv6)
-            # Typical format: "ip prefix 1.2.3.0/24" or "ip prefix 2001:db8::/32"
+
+            # Skip empty lines, comments, and define statements
+            if not line or line.startswith('#') or line.startswith('define'):
+                continue
+
+            # Match CIDR notation: IP/prefix (IPv4 and IPv6)
+            # Examples: 2001:678:114c::/48, 1.2.3.0/24
+            cidr_matches = re.findall(r'[0-9a-fA-F:\.]+/\d+', line)
+            for match in cidr_matches:
+                # Validate it's a proper CIDR
+                if '/' in match:
+                    ip_part, prefix_part = match.rsplit('/', 1)
+                    if prefix_part.isdigit():
+                        routes.add(match)
+
+            # Also match "ip prefix X.X.X.X/YY" format (Cisco style)
             if line.startswith('ip prefix'):
                 parts = line.split()
                 if len(parts) >= 3:
                     routes.add(parts[2])
-            # Also match exact format
-            elif line and not line.startswith('#') and not line.startswith('define'):
-                # Try to extract CIDR notation
-                import re
-                cidr_match = re.search(r'([0-9a-fA-F:\.]+)/\d+', line)
-                if cidr_match:
-                    routes.add(cidr_match.group(1) + '/' + line.split('/')[1].split()[0] if '/' in line else cidr_match.group(0))
+
         return routes
 
     def compare_routes(self, old_routes: set, new_routes: set) -> Dict:
@@ -180,10 +204,28 @@ class DiffGenerator:
 
         current_routes = self.parse_routes(current_content)
 
-        # Get git history
+        # Get latest committed version (HEAD) for local uncommitted changes comparison
+        head_content = self.get_file_at_commit(file_path, "HEAD")
+        if head_content:
+            head_routes = self.parse_routes(head_content)
+            head_comparison = self.compare_routes(head_routes, current_routes)
+
+            # Add a "local uncommitted changes" entry first
+            diffs = [{
+                'commit': {
+                    'hash': 'LOCAL',
+                    'date': datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
+                    'author': 'Local Changes',
+                    'message': 'Uncommitted local changes (vs HEAD)'
+                },
+                'comparison': head_comparison
+            }]
+        else:
+            diffs = []
+
+        # Get git history (excluding HEAD which we already compared)
         history = self.get_git_history(file_path)
 
-        diffs = []
         for commit in history:
             old_content = self.get_file_at_commit(file_path, commit['hash'])
             if old_content:
@@ -244,10 +286,28 @@ class DiffGenerator:
 
         current_routes = self.parse_routes(current_content)
 
+        # Get latest committed version (HEAD) for local uncommitted changes comparison
+        head_content = self.get_file_at_commit(file_path, "HEAD")
+        if head_content:
+            head_routes = self.parse_routes(head_content)
+            head_comparison = self.compare_routes(head_routes, current_routes)
+
+            # Add a "local uncommitted changes" entry first
+            diffs = [{
+                'commit': {
+                    'hash': 'LOCAL',
+                    'date': datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
+                    'author': 'Local Changes',
+                    'message': 'Uncommitted local changes (vs HEAD)'
+                },
+                'comparison': head_comparison
+            }]
+        else:
+            diffs = []
+
         # Get git history
         history = self.get_git_history(file_path)
 
-        diffs = []
         for commit in history:
             old_content = self.get_file_at_commit(file_path, commit['hash'])
             if old_content:
