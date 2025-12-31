@@ -1,0 +1,9 @@
+[DOWNSTREAM_PREFIX_AS_PYSIO_IPV6]
+enabled = true
+ipv6 = true
+from = "AS-PYSIO"
+
+[DOWNSTREAM_PREFIX_AS_PYSIO_IPV4]
+enabled = true
+ipv6 = false
+from = "AS-PYSIO"
