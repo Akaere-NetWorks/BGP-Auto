@@ -38,7 +38,7 @@
         </div>
 
         <h1>BGP Auto Configuration Report</h1>
-        <p><strong>Generated:</strong> 2026-01-08 01:45:05</p>
+        <p><strong>Generated:</strong> 2026-01-08 16:42:52</p>
         <p><strong>Configuration:</strong> as-pysio</p>
 
         <h2>Summary</h2>
@@ -88,16 +88,46 @@
 
         <h2>Generated Files</h2>
         <ul>
-            <li><a href="as-pysio_DOWNSTREAM_PREFIX_AS_PYSIO_IPV6_content.html">DOWNSTREAM_PREFIX_AS_PYSIO_IPV6.conf</a> <span style='color: #888;'>(226141 bytes)</span></li>
-<li><a href="as-pysio_DOWNSTREAM_PREFIX_AS_PYSIO_IPV4_content.html">DOWNSTREAM_PREFIX_AS_PYSIO_IPV4.conf</a> <span style='color: #888;'>(23731 bytes)</span></li>
+            <li><a href="as-pysio_DOWNSTREAM_PREFIX_AS_PYSIO_IPV6_content.html">DOWNSTREAM_PREFIX_AS_PYSIO_IPV6.conf</a> <span style='color: #888;'>(226190 bytes)</span></li>
+<li><a href="as-pysio_DOWNSTREAM_PREFIX_AS_PYSIO_IPV4_content.html">DOWNSTREAM_PREFIX_AS_PYSIO_IPV4.conf</a> <span style='color: #888;'>(23795 bytes)</span></li>
 
         </ul>
 
-        <p><strong>Merged File:</strong> <a href="as-pysio_merged_content.html">filtersprefix.conf</a> <span style='color: #888;'>(250188 bytes)</span></p>
+        <p><strong>Merged File:</strong> <a href="as-pysio_merged_content.html">filtersprefix.conf</a> <span style='color: #888;'>(250301 bytes)</span></p>
 
         <h2>Logs</h2>
         <pre>
-<div>[INFO] Found 2 config file(s)</div>
+<div>[INFO] Found 3 config file(s)</div>
+<div>[INFO] 
+======================================================================</div>
+<div>[INFO] Processing config file: cmcc.toml</div>
+<div>[INFO] ======================================================================</div>
+<div>[INFO] Found 2 enabled section(s)</div>
+<div>[INFO] 
+Processing: CMCC_IPV6</div>
+<div>[INFO]   AS Number: AS9808</div>
+<div>[INFO]   IPv6: True</div>
+<div>[INFO] Executing command: bgpq4 -6 -b -l define CMCC_IPV6 AS9808</div>
+<div>[INFO] Saved to: /__w/BGP-Auto/BGP-Auto/output/cmcc/filters/CMCC_IPV6.conf</div>
+<div>[INFO] 
+Processing: CMCC_IPV4</div>
+<div>[INFO]   AS Number: AS9808</div>
+<div>[INFO]   IPv6: False</div>
+<div>[INFO] Executing command: bgpq4 -b -l define CMCC_IPV4 AS9808</div>
+<div>[INFO] Saved to: /__w/BGP-Auto/BGP-Auto/output/cmcc/filters/CMCC_IPV4.conf</div>
+<div>[INFO] 
+Merging 2 file(s)...</div>
+<div>[INFO] Merged to: /__w/BGP-Auto/BGP-Auto/output/cmcc/filtersprefix.conf</div>
+<div>[SUCCESS] ✓ Config file cmcc.toml processed successfully</div>
+<div>[INFO] 
+Generating HTML report...</div>
+<div>[INFO] HTML detail page saved to: /__w/BGP-Auto/BGP-Auto/html/cmcc_detail.html</div>
+<div>[INFO] 
+Generating route change diffs...</div>
+<div>[WARNING] Failed to get git history for /__w/BGP-Auto/BGP-Auto/output/cmcc/filters/CMCC_IPV6.conf: Command '['git', 'log', '-5', '--pretty=format:%H|%ai|%an|%s', '--', 'output/cmcc/filters/CMCC_IPV6.conf']' returned non-zero exit status 128.</div>
+<div>[WARNING] Failed to get git history for /__w/BGP-Auto/BGP-Auto/output/cmcc/filters/CMCC_IPV4.conf: Command '['git', 'log', '-5', '--pretty=format:%H|%ai|%an|%s', '--', 'output/cmcc/filters/CMCC_IPV4.conf']' returned non-zero exit status 128.</div>
+<div>[WARNING] Failed to get git history for /__w/BGP-Auto/BGP-Auto/output/cmcc/filtersprefix.conf: Command '['git', 'log', '-5', '--pretty=format:%H|%ai|%an|%s', '--', 'output/cmcc/filtersprefix.conf']' returned non-zero exit status 128.</div>
+<div>[INFO] No git history found for cmcc, skipping diff generation</div>
 <div>[INFO] 
 ======================================================================</div>
 <div>[INFO] Processing config file: stuix.toml</div>
