@@ -38,18 +38,18 @@
         </div>
 
         <h1>BGP Auto Configuration Report</h1>
-        <p><strong>Generated:</strong> 2026-01-11 01:53:47</p>
+        <p><strong>Generated:</strong> 2026-01-11 12:25:37</p>
         <p><strong>Configuration:</strong> stuix</p>
 
         <h2>Summary</h2>
         <div class="summary">
             <div class="summary-item">
                 <h3>Total Sections</h3>
-                <p>10</p>
+                <p>11</p>
             </div>
             <div class="summary-item">
                 <h3 style="color: #4CAF50;">Success</h3>
-                <p style="color: #4CAF50;">10</p>
+                <p style="color: #4CAF50;">11</p>
             </div>
             <div class="summary-item">
                 <h3 style="color: #f44336;">Failed</h3>
@@ -148,6 +148,14 @@
                 <td><span class='success'>✓</span></td>
             </tr>
             
+            <tr>
+                <td>11</td>
+                <td>DOWNSTREAM_PREFIX_AS208223_IPV4</td>
+                <td>AS208223:AS-ALL</td>
+                <td>No</td>
+                <td><span class='success'>✓</span></td>
+            </tr>
+            
         </table>
 
         <h2>Generated Files</h2>
@@ -159,13 +167,14 @@
 <li><a href="stuix_DOWNSTREAM_PREFIX_AS210352_content.html">DOWNSTREAM_PREFIX_AS210352.conf</a> <span style='color: #888;'>(806 bytes)</span></li>
 <li><a href="stuix_DOWNSTREAM_PREFIX_AS204539_IPV4_content.html">DOWNSTREAM_PREFIX_AS204539_IPV4.conf</a> <span style='color: #888;'>(87 bytes)</span></li>
 <li><a href="stuix_DOWNSTREAM_PREFIX_AS204539_IPV46_content.html">DOWNSTREAM_PREFIX_AS204539_IPV46.conf</a> <span style='color: #888;'>(2845 bytes)</span></li>
-<li><a href="stuix_DOWNSTREAM_PREFIX_AS140915_content.html">DOWNSTREAM_PREFIX_AS140915.conf</a> <span style='color: #888;'>(40740 bytes)</span></li>
+<li><a href="stuix_DOWNSTREAM_PREFIX_AS140915_content.html">DOWNSTREAM_PREFIX_AS140915.conf</a> <span style='color: #888;'>(40764 bytes)</span></li>
 <li><a href="stuix_DOWNSTREAM_PREFIX_AS216299_content.html">DOWNSTREAM_PREFIX_AS216299.conf</a> <span style='color: #888;'>(1193 bytes)</span></li>
 <li><a href="stuix_DOWNSTREAM_PREFIX_AS154185_content.html">DOWNSTREAM_PREFIX_AS154185.conf</a> <span style='color: #888;'>(260 bytes)</span></li>
+<li><a href="stuix_DOWNSTREAM_PREFIX_AS208223_IPV4_content.html">DOWNSTREAM_PREFIX_AS208223_IPV4.conf</a> <span style='color: #888;'>(108 bytes)</span></li>
 
         </ul>
 
-        <p><strong>Merged File:</strong> <a href="stuix_merged_content.html">filtersprefix.conf</a> <span style='color: #888;'>(52529 bytes)</span></p>
+        <p><strong>Merged File:</strong> <a href="stuix_merged_content.html">filtersprefix.conf</a> <span style='color: #888;'>(52856 bytes)</span></p>
 
         <h2>Logs</h2>
         <pre>
@@ -204,7 +213,7 @@ Generating route change diffs...</div>
 ======================================================================</div>
 <div>[INFO] Processing config file: stuix.toml</div>
 <div>[INFO] ======================================================================</div>
-<div>[INFO] Found 10 enabled section(s)</div>
+<div>[INFO] Found 11 enabled section(s)</div>
 <div>[INFO] 
 Processing: DOWNSTREAM_PREFIX_AS215172</div>
 <div>[INFO]   AS Number: AS-JHL</div>
@@ -266,7 +275,13 @@ Processing: DOWNSTREAM_PREFIX_AS154185</div>
 <div>[INFO] Executing command: bgpq4 -6 -b -l define DOWNSTREAM_PREFIX_AS154185 AS154185</div>
 <div>[INFO] Saved to: /__w/BGP-Auto/BGP-Auto/output/stuix/filters/DOWNSTREAM_PREFIX_AS154185.conf</div>
 <div>[INFO] 
-Merging 10 file(s)...</div>
+Processing: DOWNSTREAM_PREFIX_AS208223_IPV4</div>
+<div>[INFO]   AS Number: AS208223:AS-ALL</div>
+<div>[INFO]   IPv6: False</div>
+<div>[INFO] Executing command: bgpq4 -b -l define DOWNSTREAM_PREFIX_AS208223_IPV4 AS208223:AS-ALL</div>
+<div>[INFO] Saved to: /__w/BGP-Auto/BGP-Auto/output/stuix/filters/DOWNSTREAM_PREFIX_AS208223_IPV4.conf</div>
+<div>[INFO] 
+Merging 11 file(s)...</div>
 <div>[INFO] Merged to: /__w/BGP-Auto/BGP-Auto/output/stuix/filtersprefix.conf</div>
 <div>[SUCCESS] ✓ Config file stuix.toml processed successfully</div>
 <div>[INFO] 
