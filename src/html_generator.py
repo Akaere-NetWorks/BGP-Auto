@@ -1,4 +1,5 @@
 """HTML report generator module"""
+
 from pathlib import Path
 from datetime import datetime
 from typing import List, Dict
@@ -13,8 +14,14 @@ class HTMLGenerator:
         self.html_dir.mkdir(parents=True, exist_ok=True)
         self.reports = []  # Store all config reports for index
 
-    def generate_report(self, config_name: str, sections: List[Dict],
-                       generated_files: List[Path], merge_file: Path = None, logs: List = None) -> Path:
+    def generate_report(
+        self,
+        config_name: str,
+        sections: List[Dict],
+        generated_files: List[Path],
+        merge_file: Path = None,
+        logs: List = None,
+    ) -> Path:
         """
         Generate HTML status report
 
@@ -28,21 +35,25 @@ class HTMLGenerator:
         Returns:
             Path to generated HTML file
         """
-        timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+        timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
         # Store report info for index
-        self.reports.append({
-            'config_name': config_name,
-            'timestamp': timestamp,
-            'total': len(sections),
-            'success': len(generated_files),
-            'failed': len(sections) - len(generated_files)
-        })
+        self.reports.append(
+            {
+                "config_name": config_name,
+                "timestamp": timestamp,
+                "total": len(sections),
+                "success": len(generated_files),
+                "failed": len(sections) - len(generated_files),
+            }
+        )
 
         # Generate detail page
         detail_file = self.html_dir / f"{config_name}_detail.html"
-        detail_content = self._generate_detail_page(config_name, sections, generated_files, merge_file, logs, timestamp)
-        with open(detail_file, 'w', encoding='utf-8') as f:
+        detail_content = self._generate_detail_page(
+            config_name, sections, generated_files, merge_file, logs, timestamp
+        )
+        with open(detail_file, "w", encoding="utf-8") as f:
             f.write(detail_content)
 
         # Generate content pages for each generated file
@@ -55,8 +66,13 @@ class HTMLGenerator:
 
         return detail_file
 
-    def generate_diff_pages(self, config_name: str, sections: List[Dict],
-                           all_diffs: Dict[str, List[Dict]], merged_diffs: List[Dict] = None):
+    def generate_diff_pages(
+        self,
+        config_name: str,
+        sections: List[Dict],
+        all_diffs: Dict[str, List[Dict]],
+        merged_diffs: List[Dict] = None,
+    ):
         """
         Generate HTML pages for route change diffs
 
@@ -78,31 +94,36 @@ class HTMLGenerator:
         if merged_diffs:
             self._generate_merged_diff_page(config_name, merged_diffs)
 
-    def _generate_diff_index(self, config_name: str, sections: List[Dict],
-                            all_diffs: Dict[str, List[Dict]], merged_diffs: List[Dict]):
+    def _generate_diff_index(
+        self,
+        config_name: str,
+        sections: List[Dict],
+        all_diffs: Dict[str, List[Dict]],
+        merged_diffs: List[Dict],
+    ):
         """Generate diff index page"""
         diff_index_file = self.html_dir / f"{config_name}_diff_index.html"
 
         # Build section links
         section_links = ""
         for section in sections:
-            section_name = section['name']
+            section_name = section["name"]
             if section_name in all_diffs and all_diffs[section_name]:
-                latest_diff = all_diffs[section_name][0]['comparison']
+                latest_diff = all_diffs[section_name][0]["comparison"]
                 section_links += f"""
                 <tr>
                     <td><a href="{config_name}_{section_name}_diff.html">{section_name}</a></td>
-                    <td>{section['from']}</td>
-                    <td>{latest_diff['old_count']} → {latest_diff['new_count']}</td>
-                    <td style='color: green;'>+{len(latest_diff['added'])}</td>
-                    <td style='color: red;'>-{len(latest_diff['removed'])}</td>
+                    <td>{section["from"]}</td>
+                    <td>{latest_diff["old_count"]} → {latest_diff["new_count"]}</td>
+                    <td style='color: green;'>+{len(latest_diff["added"])}</td>
+                    <td style='color: red;'>-{len(latest_diff["removed"])}</td>
                 </tr>
                 """
             else:
                 section_links += f"""
                 <tr>
                     <td>{section_name}</td>
-                    <td>{section['from']}</td>
+                    <td>{section["from"]}</td>
                     <td colspan='3'>No history available</td>
                 </tr>
                 """
@@ -110,7 +131,7 @@ class HTMLGenerator:
         # Build merged diff link
         merged_info = ""
         if merged_diffs:
-            latest_diff = merged_diffs[0]['comparison']
+            latest_diff = merged_diffs[0]["comparison"]
             merged_info = f"""
             <tr>
                 <td colspan='5'><hr></td>
@@ -118,9 +139,9 @@ class HTMLGenerator:
             <tr>
                 <td><a href="{config_name}_merged_diff.html"><strong>Merged Configuration (filtersprefix.conf)</strong></a></td>
                 <td>All Sections</td>
-                <td>{latest_diff['old_count']} → {latest_diff['new_count']}</td>
-                <td style='color: green;'>+{len(latest_diff['added'])}</td>
-                <td style='color: red;'>-{len(latest_diff['removed'])}</td>
+                <td>{latest_diff["old_count"]} → {latest_diff["new_count"]}</td>
+                <td style='color: green;'>+{len(latest_diff["added"])}</td>
+                <td style='color: red;'>-{len(latest_diff["removed"])}</td>
             </tr>
             """
 
@@ -167,39 +188,45 @@ class HTMLGenerator:
 </body>
 </html>"""
 
-        with open(diff_index_file, 'w', encoding='utf-8') as f:
+        with open(diff_index_file, "w", encoding="utf-8") as f:
             f.write(html_content)
 
-    def _generate_section_diff_page(self, config_name: str, section_name: str, diffs: List[Dict]):
+    def _generate_section_diff_page(
+        self, config_name: str, section_name: str, diffs: List[Dict]
+    ):
         """Generate diff page for a specific section"""
         diff_file = self.html_dir / f"{config_name}_{section_name}_diff.html"
 
         # Build diff history
         diff_history = ""
         for i, diff_item in enumerate(diffs):
-            commit = diff_item['commit']
-            comp = diff_item['comparison']
+            commit = diff_item["commit"]
+            comp = diff_item["comparison"]
 
-            added_list = "<br>".join(comp['added']) if comp['added'] else "<em>None</em>"
-            removed_list = "<br>".join(comp['removed']) if comp['removed'] else "<em>None</em>"
+            added_list = (
+                "<br>".join(comp["added"]) if comp["added"] else "<em>None</em>"
+            )
+            removed_list = (
+                "<br>".join(comp["removed"]) if comp["removed"] else "<em>None</em>"
+            )
 
             diff_history += f"""
             <div style="border: 1px solid #ccc; padding: 15px; margin-bottom: 20px; background-color: #fafafa;">
-                <h3>Compare to: {commit['message']}</h3>
-                <p><strong>Commit:</strong> {commit['hash'][:8]}</p>
-                <p><strong>Date:</strong> {commit['date']}</p>
-                <p><strong>Author:</strong> {commit['author']}</p>
+                <h3>Compare to: {commit["message"]}</h3>
+                <p><strong>Commit:</strong> {commit["hash"][:8]}</p>
+                <p><strong>Date:</strong> {commit["date"]}</p>
+                <p><strong>Author:</strong> {commit["author"]}</p>
 
                 <table style="width: 100%;">
                     <tr>
                         <td style="width: 50%; vertical-align: top;">
-                            <h4 style="color: green;">Added Routes (+{len(comp['added'])})</h4>
+                            <h4 style="color: green;">Added Routes (+{len(comp["added"])})</h4>
                             <div style="background-color: #e8f5e9; padding: 10px; border-radius: 5px;">
                                 {added_list}
                             </div>
                         </td>
                         <td style="width: 50%; vertical-align: top;">
-                            <h4 style="color: red;">Removed Routes (-{len(comp['removed'])})</h4>
+                            <h4 style="color: red;">Removed Routes (-{len(comp["removed"])})</h4>
                             <div style="background-color: #ffebee; padding: 10px; border-radius: 5px;">
                                 {removed_list}
                             </div>
@@ -207,8 +234,8 @@ class HTMLGenerator:
                     </tr>
                 </table>
 
-                <p><strong>Summary:</strong> Routes changed from {comp['old_count']} to {comp['new_count']}
-                   (Δ {comp['new_count'] - comp['old_count']:+d})</p>
+                <p><strong>Summary:</strong> Routes changed from {comp["old_count"]} to {comp["new_count"]}
+                   (Δ {comp["new_count"] - comp["old_count"]:+d})</p>
             </div>
             """
 
@@ -239,7 +266,7 @@ class HTMLGenerator:
 </body>
 </html>"""
 
-        with open(diff_file, 'w', encoding='utf-8') as f:
+        with open(diff_file, "w", encoding="utf-8") as f:
             f.write(html_content)
 
     def _generate_merged_diff_page(self, config_name: str, diffs: List[Dict]):
@@ -249,29 +276,33 @@ class HTMLGenerator:
         # Build diff history
         diff_history = ""
         for i, diff_item in enumerate(diffs):
-            commit = diff_item['commit']
-            comp = diff_item['comparison']
+            commit = diff_item["commit"]
+            comp = diff_item["comparison"]
 
-            added_list = "<br>".join(comp['added']) if comp['added'] else "<em>None</em>"
-            removed_list = "<br>".join(comp['removed']) if comp['removed'] else "<em>None</em>"
+            added_list = (
+                "<br>".join(comp["added"]) if comp["added"] else "<em>None</em>"
+            )
+            removed_list = (
+                "<br>".join(comp["removed"]) if comp["removed"] else "<em>None</em>"
+            )
 
             diff_history += f"""
             <div style="border: 1px solid #ccc; padding: 15px; margin-bottom: 20px; background-color: #fafafa;">
-                <h3>Compare to: {commit['message']}</h3>
-                <p><strong>Commit:</strong> {commit['hash'][:8]}</p>
-                <p><strong>Date:</strong> {commit['date']}</p>
-                <p><strong>Author:</strong> {commit['author']}</p>
+                <h3>Compare to: {commit["message"]}</h3>
+                <p><strong>Commit:</strong> {commit["hash"][:8]}</p>
+                <p><strong>Date:</strong> {commit["date"]}</p>
+                <p><strong>Author:</strong> {commit["author"]}</p>
 
                 <table style="width: 100%;">
                     <tr>
                         <td style="width: 50%; vertical-align: top;">
-                            <h4 style="color: green;">Added Routes (+{len(comp['added'])})</h4>
+                            <h4 style="color: green;">Added Routes (+{len(comp["added"])})</h4>
                             <div style="background-color: #e8f5e9; padding: 10px; border-radius: 5px; max-height: 400px; overflow-y: auto;">
                                 {added_list}
                             </div>
                         </td>
                         <td style="width: 50%; vertical-align: top;">
-                            <h4 style="color: red;">Removed Routes (-{len(comp['removed'])})</h4>
+                            <h4 style="color: red;">Removed Routes (-{len(comp["removed"])})</h4>
                             <div style="background-color: #ffebee; padding: 10px; border-radius: 5px; max-height: 400px; overflow-y: auto;">
                                 {removed_list}
                             </div>
@@ -279,8 +310,8 @@ class HTMLGenerator:
                     </tr>
                 </table>
 
-                <p><strong>Summary:</strong> Routes changed from {comp['old_count']} to {comp['new_count']}
-                   (Δ {comp['new_count'] - comp['old_count']:+d})</p>
+                <p><strong>Summary:</strong> Routes changed from {comp["old_count"]} to {comp["new_count"]}
+                   (Δ {comp["new_count"] - comp["old_count"]:+d})</p>
             </div>
             """
 
@@ -313,9 +344,9 @@ class HTMLGenerator:
 </body>
 </html>"""
 
-        with open(diff_file, 'w', encoding='utf-8') as f:
+        with open(diff_file, "w", encoding="utf-8") as f:
             f.write(html_content)
-    
+
     def generate_index(self):
         """Generate main index page"""
         index_file = self.html_dir / "index.html"
@@ -324,11 +355,11 @@ class HTMLGenerator:
         for report in self.reports:
             reports_rows += f"""
             <tr>
-                <td><a href="{report['config_name']}_detail.html">{report['config_name']}</a></td>
-                <td>{report['timestamp']}</td>
-                <td>{report['total']}</td>
-                <td>{report['success']}</td>
-                <td>{report['failed']}</td>
+                <td><a href="{report["config_name"]}_detail.html">{report["config_name"]}</a></td>
+                <td>{report["timestamp"]}</td>
+                <td>{report["total"]}</td>
+                <td>{report["success"]}</td>
+                <td>{report["failed"]}</td>
             </tr>
             """
 
@@ -372,19 +403,26 @@ class HTMLGenerator:
         </table>
 
         <div class="footer">
-            <p>Last updated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}</p>
+            <p>Last updated: {datetime.now().strftime("%Y-%m-%d %H:%M:%S")}</p>
         </div>
     </div>
 </body>
 </html>"""
 
-        with open(index_file, 'w', encoding='utf-8') as f:
+        with open(index_file, "w", encoding="utf-8") as f:
             f.write(html_content)
 
         return index_file
-    
-    def _generate_detail_page(self, config_name: str, sections: List[Dict],
-                      generated_files: List[Path], merge_file: Path = None, logs: List = None, timestamp: str = None) -> str:
+
+    def _generate_detail_page(
+        self,
+        config_name: str,
+        sections: List[Dict],
+        generated_files: List[Path],
+        merge_file: Path = None,
+        logs: List = None,
+        timestamp: str = None,
+    ) -> str:
         """Generate detail page HTML content"""
 
         total_sections = len(sections)
@@ -394,14 +432,28 @@ class HTMLGenerator:
         # Build sections table
         sections_rows = ""
         for i, section in enumerate(sections):
-            status = "<span class='success'>✓</span>" if i < success_count else "<span class='failed'>✗</span>"
+            status = (
+                "<span class='success'>✓</span>"
+                if i < success_count
+                else "<span class='failed'>✗</span>"
+            )
+            section_type = section.get("type", "bgp")
+
+            if section_type == "static":
+                as_number = "static"
+                ipv6_name = section.get("ipv6") or "-"
+                ipv4_name = section.get("ipv4") or "-"
+                ip_info = f"V6: {ipv6_name} | V4: {ipv4_name}"
+            else:
+                as_number = section.get("from", "")
+                ip_info = "Yes" if section.get("ipv6") else "No"
 
             sections_rows += f"""
             <tr>
                 <td>{i + 1}</td>
-                <td>{section['name']}</td>
-                <td>{section['from']}</td>
-                <td>{'Yes' if section['ipv6'] else 'No'}</td>
+                <td>{section["name"]}</td>
+                <td>{as_number}</td>
+                <td>{ip_info}</td>
                 <td>{status}</td>
             </tr>
             """
@@ -491,7 +543,7 @@ class HTMLGenerator:
                 <th>#</th>
                 <th>Section Name</th>
                 <th>AS Number</th>
-                <th>IPv6</th>
+                <th>IPv6 / IPv4</th>
                 <th>Status</th>
             </tr>
             {sections_rows}
@@ -513,14 +565,14 @@ class HTMLGenerator:
 </html>"""
 
         return html_template
-    
+
     def _generate_content_page(self, config_name: str, file_path: Path):
         """Generate content page for a specific file"""
         content_file = self.html_dir / f"{config_name}_{file_path.stem}_content.html"
 
         # Read file content
         try:
-            with open(file_path, 'r', encoding='utf-8') as f:
+            with open(file_path, "r", encoding="utf-8") as f:
                 content = f.read()
         except Exception as e:
             content = f"Error reading file: {e}"
@@ -553,7 +605,7 @@ class HTMLGenerator:
 </body>
 </html>"""
 
-        with open(content_file, 'w', encoding='utf-8') as f:
+        with open(content_file, "w", encoding="utf-8") as f:
             f.write(html_content)
 
     def _generate_merged_content_page(self, config_name: str, merge_file: Path):
@@ -562,7 +614,7 @@ class HTMLGenerator:
 
         # Read file content
         try:
-            with open(merge_file, 'r', encoding='utf-8') as f:
+            with open(merge_file, "r", encoding="utf-8") as f:
                 content = f.read()
         except Exception as e:
             content = f"Error reading file: {e}"
@@ -595,5 +647,5 @@ class HTMLGenerator:
 </body>
 </html>"""
 
-        with open(content_file, 'w', encoding='utf-8') as f:
+        with open(content_file, "w", encoding="utf-8") as f:
             f.write(html_content)

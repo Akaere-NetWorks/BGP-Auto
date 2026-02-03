@@ -38,18 +38,18 @@
         </div>
 
         <h1>BGP Auto Configuration Report</h1>
-        <p><strong>Generated:</strong> 2026-02-03 10:12:09</p>
+        <p><strong>Generated:</strong> 2026-02-03 18:34:52</p>
         <p><strong>Configuration:</strong> china3c</p>
 
         <h2>Summary</h2>
         <div class="summary">
             <div class="summary-item">
                 <h3>Total Sections</h3>
-                <p>6</p>
+                <p>7</p>
             </div>
             <div class="summary-item">
                 <h3 style="color: #4CAF50;">Success</h3>
-                <p style="color: #4CAF50;">6</p>
+                <p style="color: #4CAF50;">7</p>
             </div>
             <div class="summary-item">
                 <h3 style="color: #f44336;">Failed</h3>
@@ -64,7 +64,7 @@
                 <th>#</th>
                 <th>Section Name</th>
                 <th>AS Number</th>
-                <th>IPv6</th>
+                <th>IPv6 / IPv4</th>
                 <th>Status</th>
             </tr>
             
@@ -116,6 +116,14 @@
                 <td><span class='success'>✓</span></td>
             </tr>
             
+            <tr>
+                <td>7</td>
+                <td>ALL</td>
+                <td>static</td>
+                <td>V6: REJECTED_PREFIXES_V6 | V4: REJECTED_PREFIXES_V4</td>
+                <td><span class='success'>✓</span></td>
+            </tr>
+            
         </table>
 
         <h2>Generated Files</h2>
@@ -126,6 +134,7 @@
 <li><a href="china3c_CT_IPV6_content.html">CT_IPV6.conf</a> <span style='color: #888;'>(74691 bytes)</span></li>
 <li><a href="china3c_CU_IPV4_content.html">CU_IPV4.conf</a> <span style='color: #888;'>(52930 bytes)</span></li>
 <li><a href="china3c_CU_IPV6_content.html">CU_IPV6.conf</a> <span style='color: #888;'>(10985 bytes)</span></li>
+<li><a href="china3c_all_content.html">all.conf</a> <span style='color: #888;'>(876945 bytes)</span></li>
 
         </ul>
 
@@ -136,48 +145,188 @@
 <div>[INFO] Found 4 config file(s)</div>
 <div>[INFO] 
 ======================================================================</div>
+<div>[INFO] Processing config file: stuix.toml</div>
+<div>[INFO] ======================================================================</div>
+<div>[INFO] Found 11 enabled section(s)</div>
+<div>[INFO] 
+Processing: DOWNSTREAM_PREFIX_AS215172</div>
+<div>[INFO]   AS Number: AS-JHL</div>
+<div>[INFO]   IPv6: True</div>
+<div>[INFO] Executing command: bgpq4 -6 -b -l define DOWNSTREAM_PREFIX_AS215172 AS-JHL</div>
+<div>[INFO] Saved to: /home/pysio/Documents/BGP-Auto/output/stuix/filters/DOWNSTREAM_PREFIX_AS215172.conf</div>
+<div>[INFO] 
+Processing: DOWNSTREAM_PREFIX_AS215172_IPV4</div>
+<div>[INFO]   AS Number: AS-JHL</div>
+<div>[INFO]   IPv6: False</div>
+<div>[INFO] Executing command: bgpq4 -b -l define DOWNSTREAM_PREFIX_AS215172_IPV4 AS-JHL</div>
+<div>[INFO] Saved to: /home/pysio/Documents/BGP-Auto/output/stuix/filters/DOWNSTREAM_PREFIX_AS215172_IPV4.conf</div>
+<div>[INFO] 
+Processing: DOWNSTREAM_PREFIX_AS211729</div>
+<div>[INFO]   AS Number: AS211729</div>
+<div>[INFO]   IPv6: True</div>
+<div>[INFO] Executing command: bgpq4 -6 -b -l define DOWNSTREAM_PREFIX_AS211729 AS211729</div>
+<div>[INFO] Saved to: /home/pysio/Documents/BGP-Auto/output/stuix/filters/DOWNSTREAM_PREFIX_AS211729.conf</div>
+<div>[INFO] 
+Processing: DOWNSTREAM_PREFIX_AS12198</div>
+<div>[INFO]   AS Number: AS-JSMSR</div>
+<div>[INFO]   IPv6: True</div>
+<div>[INFO] Executing command: bgpq4 -6 -b -l define DOWNSTREAM_PREFIX_AS12198 AS-JSMSR</div>
+<div>[INFO] Saved to: /home/pysio/Documents/BGP-Auto/output/stuix/filters/DOWNSTREAM_PREFIX_AS12198.conf</div>
+<div>[INFO] 
+Processing: DOWNSTREAM_PREFIX_AS210352</div>
+<div>[INFO]   AS Number: AS210352</div>
+<div>[INFO]   IPv6: True</div>
+<div>[INFO] Executing command: bgpq4 -6 -b -l define DOWNSTREAM_PREFIX_AS210352 AS210352</div>
+<div>[INFO] Saved to: /home/pysio/Documents/BGP-Auto/output/stuix/filters/DOWNSTREAM_PREFIX_AS210352.conf</div>
+<div>[INFO] 
+Processing: DOWNSTREAM_PREFIX_AS204539_IPV4</div>
+<div>[INFO]   AS Number: AS-AXIC</div>
+<div>[INFO]   IPv6: False</div>
+<div>[INFO] Executing command: bgpq4 -b -l define DOWNSTREAM_PREFIX_AS204539_IPV4 AS-AXIC</div>
+<div>[INFO] Saved to: /home/pysio/Documents/BGP-Auto/output/stuix/filters/DOWNSTREAM_PREFIX_AS204539_IPV4.conf</div>
+<div>[INFO] 
+Processing: DOWNSTREAM_PREFIX_AS204539_IPV46</div>
+<div>[INFO]   AS Number: AS-AXIC</div>
+<div>[INFO]   IPv6: True</div>
+<div>[INFO] Executing command: bgpq4 -6 -b -l define DOWNSTREAM_PREFIX_AS204539_IPV46 AS-AXIC</div>
+<div>[INFO] Saved to: /home/pysio/Documents/BGP-Auto/output/stuix/filters/DOWNSTREAM_PREFIX_AS204539_IPV46.conf</div>
+<div>[INFO] 
+Processing: DOWNSTREAM_PREFIX_AS140915</div>
+<div>[INFO]   AS Number: AS140915:AS-MKNT</div>
+<div>[INFO]   IPv6: True</div>
+<div>[INFO] Executing command: bgpq4 -6 -b -l define DOWNSTREAM_PREFIX_AS140915 AS140915:AS-MKNT</div>
+<div>[INFO] Saved to: /home/pysio/Documents/BGP-Auto/output/stuix/filters/DOWNSTREAM_PREFIX_AS140915.conf</div>
+<div>[INFO] 
+Processing: DOWNSTREAM_PREFIX_AS216299</div>
+<div>[INFO]   AS Number: AS216299</div>
+<div>[INFO]   IPv6: True</div>
+<div>[INFO] Executing command: bgpq4 -6 -b -l define DOWNSTREAM_PREFIX_AS216299 AS216299</div>
+<div>[INFO] Saved to: /home/pysio/Documents/BGP-Auto/output/stuix/filters/DOWNSTREAM_PREFIX_AS216299.conf</div>
+<div>[INFO] 
+Processing: DOWNSTREAM_PREFIX_AS154185</div>
+<div>[INFO]   AS Number: AS154185</div>
+<div>[INFO]   IPv6: True</div>
+<div>[INFO] Executing command: bgpq4 -6 -b -l define DOWNSTREAM_PREFIX_AS154185 AS154185</div>
+<div>[INFO] Saved to: /home/pysio/Documents/BGP-Auto/output/stuix/filters/DOWNSTREAM_PREFIX_AS154185.conf</div>
+<div>[INFO] 
+Processing: DOWNSTREAM_PREFIX_AS208223_IPV4</div>
+<div>[INFO]   AS Number: AS208223:AS-ALL</div>
+<div>[INFO]   IPv6: False</div>
+<div>[INFO] Executing command: bgpq4 -b -l define DOWNSTREAM_PREFIX_AS208223_IPV4 AS208223:AS-ALL</div>
+<div>[INFO] Saved to: /home/pysio/Documents/BGP-Auto/output/stuix/filters/DOWNSTREAM_PREFIX_AS208223_IPV4.conf</div>
+<div>[INFO] 
+Merging 11 file(s)...</div>
+<div>[INFO] Merged to: /home/pysio/Documents/BGP-Auto/output/stuix/filtersprefix.conf</div>
+<div>[SUCCESS] ✓ Config file stuix.toml processed successfully</div>
+<div>[INFO] 
+Generating HTML report...</div>
+<div>[INFO] HTML detail page saved to: /home/pysio/Documents/BGP-Auto/html/stuix_detail.html</div>
+<div>[INFO] 
+Generating route change diffs...</div>
+<div>[SUCCESS] ✓ Diff pages generated for stuix</div>
+<div>[INFO] 
+======================================================================</div>
+<div>[INFO] Processing config file: as-pysio.toml</div>
+<div>[INFO] ======================================================================</div>
+<div>[INFO] Found 2 enabled section(s)</div>
+<div>[INFO] 
+Processing: DOWNSTREAM_PREFIX_AS_PYSIO_IPV6</div>
+<div>[INFO]   AS Number: AS-PYSIO</div>
+<div>[INFO]   IPv6: True</div>
+<div>[INFO] Executing command: bgpq4 -6 -b -l define DOWNSTREAM_PREFIX_AS_PYSIO_IPV6 AS-PYSIO</div>
+<div>[INFO] Saved to: /home/pysio/Documents/BGP-Auto/output/as-pysio/filters/DOWNSTREAM_PREFIX_AS_PYSIO_IPV6.conf</div>
+<div>[INFO] 
+Processing: DOWNSTREAM_PREFIX_AS_PYSIO_IPV4</div>
+<div>[INFO]   AS Number: AS-PYSIO</div>
+<div>[INFO]   IPv6: False</div>
+<div>[INFO] Executing command: bgpq4 -b -l define DOWNSTREAM_PREFIX_AS_PYSIO_IPV4 AS-PYSIO</div>
+<div>[INFO] Saved to: /home/pysio/Documents/BGP-Auto/output/as-pysio/filters/DOWNSTREAM_PREFIX_AS_PYSIO_IPV4.conf</div>
+<div>[INFO] 
+Merging 2 file(s)...</div>
+<div>[INFO] Merged to: /home/pysio/Documents/BGP-Auto/output/as-pysio/filtersprefix.conf</div>
+<div>[SUCCESS] ✓ Config file as-pysio.toml processed successfully</div>
+<div>[INFO] 
+Generating HTML report...</div>
+<div>[INFO] HTML detail page saved to: /home/pysio/Documents/BGP-Auto/html/as-pysio_detail.html</div>
+<div>[INFO] 
+Generating route change diffs...</div>
+<div>[SUCCESS] ✓ Diff pages generated for as-pysio</div>
+<div>[INFO] 
+======================================================================</div>
+<div>[INFO] Processing config file: kcix.toml</div>
+<div>[INFO] ======================================================================</div>
+<div>[INFO] Found 2 enabled section(s)</div>
+<div>[INFO] 
+Processing: DOWNSTREAM_PREFIX_AS204539_IPV4</div>
+<div>[INFO]   AS Number: AS-AXIC</div>
+<div>[INFO]   IPv6: False</div>
+<div>[INFO] Executing command: bgpq4 -b -l define DOWNSTREAM_PREFIX_AS204539_IPV4 AS-AXIC</div>
+<div>[INFO] Saved to: /home/pysio/Documents/BGP-Auto/output/kcix/filters/DOWNSTREAM_PREFIX_AS204539_IPV4.conf</div>
+<div>[INFO] 
+Processing: DOWNSTREAM_PREFIX_AS204539_IPV46</div>
+<div>[INFO]   AS Number: AS-AXIC</div>
+<div>[INFO]   IPv6: True</div>
+<div>[INFO] Executing command: bgpq4 -6 -b -l define DOWNSTREAM_PREFIX_AS204539_IPV46 AS-AXIC</div>
+<div>[INFO] Saved to: /home/pysio/Documents/BGP-Auto/output/kcix/filters/DOWNSTREAM_PREFIX_AS204539_IPV46.conf</div>
+<div>[INFO] 
+Merging 2 file(s)...</div>
+<div>[INFO] Merged to: /home/pysio/Documents/BGP-Auto/output/kcix/filtersprefix.conf</div>
+<div>[SUCCESS] ✓ Config file kcix.toml processed successfully</div>
+<div>[INFO] 
+Generating HTML report...</div>
+<div>[INFO] HTML detail page saved to: /home/pysio/Documents/BGP-Auto/html/kcix_detail.html</div>
+<div>[INFO] 
+Generating route change diffs...</div>
+<div>[SUCCESS] ✓ Diff pages generated for kcix</div>
+<div>[INFO] 
+======================================================================</div>
 <div>[INFO] Processing config file: china3c.toml</div>
 <div>[INFO] ======================================================================</div>
-<div>[INFO] Found 6 enabled section(s)</div>
+<div>[INFO] Found 7 enabled section(s)</div>
 <div>[INFO] 
 Processing: CM_IPV6</div>
 <div>[INFO]   AS Number: AS9808</div>
 <div>[INFO]   IPv6: True</div>
 <div>[INFO] Executing command: bgpq4 -6 -b -l define CM_IPV6 AS9808</div>
-<div>[INFO] Saved to: /__w/BGP-Auto/BGP-Auto/output/china3c/filters/CM_IPV6.conf</div>
+<div>[INFO] Saved to: /home/pysio/Documents/BGP-Auto/output/china3c/filters/CM_IPV6.conf</div>
 <div>[INFO] 
 Processing: CM_IPV4</div>
 <div>[INFO]   AS Number: AS9808</div>
 <div>[INFO]   IPv6: False</div>
 <div>[INFO] Executing command: bgpq4 -b -l define CM_IPV4 AS9808</div>
-<div>[INFO] Saved to: /__w/BGP-Auto/BGP-Auto/output/china3c/filters/CM_IPV4.conf</div>
+<div>[INFO] Saved to: /home/pysio/Documents/BGP-Auto/output/china3c/filters/CM_IPV4.conf</div>
 <div>[INFO] 
 Processing: CT_IPV4</div>
 <div>[INFO]   AS Number: AS4134</div>
 <div>[INFO]   IPv6: False</div>
 <div>[INFO] Executing command: bgpq4 -b -l define CT_IPV4 AS4134</div>
-<div>[INFO] Saved to: /__w/BGP-Auto/BGP-Auto/output/china3c/filters/CT_IPV4.conf</div>
+<div>[INFO] Saved to: /home/pysio/Documents/BGP-Auto/output/china3c/filters/CT_IPV4.conf</div>
 <div>[INFO] 
 Processing: CT_IPV6</div>
 <div>[INFO]   AS Number: AS4134</div>
 <div>[INFO]   IPv6: True</div>
 <div>[INFO] Executing command: bgpq4 -6 -b -l define CT_IPV6 AS4134</div>
-<div>[INFO] Saved to: /__w/BGP-Auto/BGP-Auto/output/china3c/filters/CT_IPV6.conf</div>
+<div>[INFO] Saved to: /home/pysio/Documents/BGP-Auto/output/china3c/filters/CT_IPV6.conf</div>
 <div>[INFO] 
 Processing: CU_IPV4</div>
 <div>[INFO]   AS Number: AS4837</div>
 <div>[INFO]   IPv6: False</div>
 <div>[INFO] Executing command: bgpq4 -b -l define CU_IPV4 AS4837</div>
-<div>[INFO] Saved to: /__w/BGP-Auto/BGP-Auto/output/china3c/filters/CU_IPV4.conf</div>
+<div>[INFO] Saved to: /home/pysio/Documents/BGP-Auto/output/china3c/filters/CU_IPV4.conf</div>
 <div>[INFO] 
 Processing: CU_IPV6</div>
 <div>[INFO]   AS Number: AS4837</div>
 <div>[INFO]   IPv6: True</div>
 <div>[INFO] Executing command: bgpq4 -6 -b -l define CU_IPV6 AS4837</div>
-<div>[INFO] Saved to: /__w/BGP-Auto/BGP-Auto/output/china3c/filters/CU_IPV6.conf</div>
+<div>[INFO] Saved to: /home/pysio/Documents/BGP-Auto/output/china3c/filters/CU_IPV6.conf</div>
+<div>[INFO] 
+Processing: ALL</div>
+<div>[INFO]   IPv6 List: REJECTED_PREFIXES_V6</div>
+<div>[INFO]   IPv4 List: REJECTED_PREFIXES_V4</div>
+<div>[INFO] Saved to: /home/pysio/Documents/BGP-Auto/output/china3c/all.conf</div>
 <div>[INFO] 
 Merging 6 file(s)...</div>
-<div>[INFO] Merged to: /__w/BGP-Auto/BGP-Auto/output/china3c/filtersprefix.conf</div>
+<div>[INFO] Merged to: /home/pysio/Documents/BGP-Auto/output/china3c/filtersprefix.conf</div>
 <div>[SUCCESS] ✓ Config file china3c.toml processed successfully</div>
 <div>[INFO] 
 Generating HTML report...</div>

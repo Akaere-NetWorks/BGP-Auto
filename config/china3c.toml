@@ -27,3 +27,8 @@ from = "AS4837"
 enabled = true
 ipv6 = true
 from = "AS4837"
+
+[ALL]
+enabled = true
+ipv6 = "REJECTED_PREFIXES_V6"
+ipv4 = "REJECTED_PREFIXES_V4"
