@@ -1,0 +1,29 @@
+[CM_IPV6]
+enabled = true
+ipv6 = true
+from = "AS9808"
+
+[CM_IPV4]
+enabled = true
+ipv6 = false
+from = "AS9808"
+
+[CT_IPV4]
+enabled = true
+ipv6 = false
+from = "AS4134"
+
+[CT_IPV6]
+enabled = true
+ipv6 = true
+from = "AS4134"
+
+[CU_IPV4]
+enabled = true
+ipv6 = false
+from = "AS4837"
+
+[CU_IPV6]
+enabled = true
+ipv6 = true
+from = "AS4837"

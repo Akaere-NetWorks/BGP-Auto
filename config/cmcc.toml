@@ -1,9 +1,0 @@
-[CMCC_IPV6]
-enabled = true
-ipv6 = true
-from = "AS9808"
-
-[CMCC_IPV4]
-enabled = true
-ipv6 = false
-from = "AS9808"
