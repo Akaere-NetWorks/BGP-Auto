@@ -52,3 +52,8 @@ from = "AS154185"
 enabled = true
 ipv6 = false
 from = "AS208223:AS-ALL"
+
+[DOWNSTREAM_PREFIX_AS199794]
+enabled = true
+ipv6 = true
+from = "AS199794"
