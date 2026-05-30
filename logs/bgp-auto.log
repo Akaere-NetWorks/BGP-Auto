@@ -1,227 +1,227 @@
-2026-05-29 03:35:34,539 - INFO - Found 4 config file(s)
-2026-05-29 03:35:34,539 - INFO - 
+2026-05-30 03:23:57,019 - INFO - Found 4 config file(s)
+2026-05-30 03:23:57,019 - INFO - 
 ======================================================================
-2026-05-29 03:35:34,539 - INFO - Processing config file: kcix.toml
-2026-05-29 03:35:34,539 - INFO - ======================================================================
-2026-05-29 03:35:34,540 - INFO - Found 2 enabled section(s)
-2026-05-29 03:35:34,540 - INFO - 
+2026-05-30 03:23:57,019 - INFO - Processing config file: kcix.toml
+2026-05-30 03:23:57,019 - INFO - ======================================================================
+2026-05-30 03:23:57,020 - INFO - Found 2 enabled section(s)
+2026-05-30 03:23:57,020 - INFO - 
 Processing: DOWNSTREAM_PREFIX_AS204539_IPV4
-2026-05-29 03:35:34,540 - INFO -   AS Number: AS-AXIC
-2026-05-29 03:35:34,540 - INFO -   IPv6: False
-2026-05-29 03:35:34,540 - INFO - Executing command: bgpq4 -b -l define DOWNSTREAM_PREFIX_AS204539_IPV4 AS-AXIC
-2026-05-29 03:35:34,864 - INFO - Saved to: /__w/BGP-Auto/BGP-Auto/output/kcix/filters/DOWNSTREAM_PREFIX_AS204539_IPV4.conf
-2026-05-29 03:35:34,865 - INFO - 
+2026-05-30 03:23:57,020 - INFO -   AS Number: AS-AXIC
+2026-05-30 03:23:57,020 - INFO -   IPv6: False
+2026-05-30 03:23:57,020 - INFO - Executing command: bgpq4 -b -l define DOWNSTREAM_PREFIX_AS204539_IPV4 AS-AXIC
+2026-05-30 03:23:57,731 - INFO - Saved to: /__w/BGP-Auto/BGP-Auto/output/kcix/filters/DOWNSTREAM_PREFIX_AS204539_IPV4.conf
+2026-05-30 03:23:57,731 - INFO - 
 Processing: DOWNSTREAM_PREFIX_AS204539_IPV46
-2026-05-29 03:35:34,865 - INFO -   AS Number: AS-AXIC
-2026-05-29 03:35:34,865 - INFO -   IPv6: True
-2026-05-29 03:35:34,865 - INFO - Executing command: bgpq4 -6 -b -l define DOWNSTREAM_PREFIX_AS204539_IPV46 AS-AXIC
-2026-05-29 03:35:35,062 - INFO - Saved to: /__w/BGP-Auto/BGP-Auto/output/kcix/filters/DOWNSTREAM_PREFIX_AS204539_IPV46.conf
-2026-05-29 03:35:35,062 - INFO - 
+2026-05-30 03:23:57,731 - INFO -   AS Number: AS-AXIC
+2026-05-30 03:23:57,731 - INFO -   IPv6: True
+2026-05-30 03:23:57,731 - INFO - Executing command: bgpq4 -6 -b -l define DOWNSTREAM_PREFIX_AS204539_IPV46 AS-AXIC
+2026-05-30 03:23:58,093 - INFO - Saved to: /__w/BGP-Auto/BGP-Auto/output/kcix/filters/DOWNSTREAM_PREFIX_AS204539_IPV46.conf
+2026-05-30 03:23:58,093 - INFO - 
 Merging 2 file(s)...
-2026-05-29 03:35:35,062 - INFO - Merged to: /__w/BGP-Auto/BGP-Auto/output/kcix/filtersprefix.conf
-2026-05-29 03:35:35,062 - INFO - ✓ Config file kcix.toml processed successfully
-2026-05-29 03:35:35,062 - INFO - 
+2026-05-30 03:23:58,093 - INFO - Merged to: /__w/BGP-Auto/BGP-Auto/output/kcix/filtersprefix.conf
+2026-05-30 03:23:58,093 - INFO - ✓ Config file kcix.toml processed successfully
+2026-05-30 03:23:58,093 - INFO - 
 Generating HTML report...
-2026-05-29 03:35:35,063 - INFO - HTML detail page saved to: /__w/BGP-Auto/BGP-Auto/html/kcix_detail.html
-2026-05-29 03:35:35,063 - INFO - 
+2026-05-30 03:23:58,094 - INFO - HTML detail page saved to: /__w/BGP-Auto/BGP-Auto/html/kcix_detail.html
+2026-05-30 03:23:58,094 - INFO - 
 Generating route change diffs...
-2026-05-29 03:35:35,066 - WARNING - Failed to get git history for /__w/BGP-Auto/BGP-Auto/output/kcix/filters/DOWNSTREAM_PREFIX_AS204539_IPV4.conf: Command '['git', 'log', '-5', '--pretty=format:%H|%ai|%an|%s', '--', 'output/kcix/filters/DOWNSTREAM_PREFIX_AS204539_IPV4.conf']' returned non-zero exit status 128.
-2026-05-29 03:35:35,070 - WARNING - Failed to get git history for /__w/BGP-Auto/BGP-Auto/output/kcix/filters/DOWNSTREAM_PREFIX_AS204539_IPV46.conf: Command '['git', 'log', '-5', '--pretty=format:%H|%ai|%an|%s', '--', 'output/kcix/filters/DOWNSTREAM_PREFIX_AS204539_IPV46.conf']' returned non-zero exit status 128.
-2026-05-29 03:35:35,074 - WARNING - Failed to get git history for /__w/BGP-Auto/BGP-Auto/output/kcix/filtersprefix.conf: Command '['git', 'log', '-5', '--pretty=format:%H|%ai|%an|%s', '--', 'output/kcix/filtersprefix.conf']' returned non-zero exit status 128.
-2026-05-29 03:35:35,074 - INFO - No git history found for kcix, skipping diff generation
-2026-05-29 03:35:35,075 - INFO - 
+2026-05-30 03:23:58,097 - WARNING - Failed to get git history for /__w/BGP-Auto/BGP-Auto/output/kcix/filters/DOWNSTREAM_PREFIX_AS204539_IPV4.conf: Command '['git', 'log', '-5', '--pretty=format:%H|%ai|%an|%s', '--', 'output/kcix/filters/DOWNSTREAM_PREFIX_AS204539_IPV4.conf']' returned non-zero exit status 128.
+2026-05-30 03:23:58,101 - WARNING - Failed to get git history for /__w/BGP-Auto/BGP-Auto/output/kcix/filters/DOWNSTREAM_PREFIX_AS204539_IPV46.conf: Command '['git', 'log', '-5', '--pretty=format:%H|%ai|%an|%s', '--', 'output/kcix/filters/DOWNSTREAM_PREFIX_AS204539_IPV46.conf']' returned non-zero exit status 128.
+2026-05-30 03:23:58,106 - WARNING - Failed to get git history for /__w/BGP-Auto/BGP-Auto/output/kcix/filtersprefix.conf: Command '['git', 'log', '-5', '--pretty=format:%H|%ai|%an|%s', '--', 'output/kcix/filtersprefix.conf']' returned non-zero exit status 128.
+2026-05-30 03:23:58,106 - INFO - No git history found for kcix, skipping diff generation
+2026-05-30 03:23:58,106 - INFO - 
 ======================================================================
-2026-05-29 03:35:35,075 - INFO - Processing config file: china3c.toml
-2026-05-29 03:35:35,075 - INFO - ======================================================================
-2026-05-29 03:35:35,075 - INFO - Found 7 enabled section(s)
-2026-05-29 03:35:35,075 - INFO - 
+2026-05-30 03:23:58,106 - INFO - Processing config file: china3c.toml
+2026-05-30 03:23:58,106 - INFO - ======================================================================
+2026-05-30 03:23:58,106 - INFO - Found 7 enabled section(s)
+2026-05-30 03:23:58,106 - INFO - 
 Processing: CM_IPV6
-2026-05-29 03:35:35,075 - INFO -   AS Number: AS9808
-2026-05-29 03:35:35,075 - INFO -   IPv6: True
-2026-05-29 03:35:35,075 - INFO - Executing command: bgpq4 -6 -b -l define CM_IPV6 AS9808
-2026-05-29 03:35:35,321 - INFO - Saved to: /__w/BGP-Auto/BGP-Auto/output/china3c/filters/CM_IPV6.conf
-2026-05-29 03:35:35,321 - INFO - 
+2026-05-30 03:23:58,106 - INFO -   AS Number: AS9808
+2026-05-30 03:23:58,106 - INFO -   IPv6: True
+2026-05-30 03:23:58,106 - INFO - Executing command: bgpq4 -6 -b -l define CM_IPV6 AS9808
+2026-05-30 03:23:58,480 - INFO - Saved to: /__w/BGP-Auto/BGP-Auto/output/china3c/filters/CM_IPV6.conf
+2026-05-30 03:23:58,480 - INFO - 
 Processing: CM_IPV4
-2026-05-29 03:35:35,321 - INFO -   AS Number: AS9808
-2026-05-29 03:35:35,321 - INFO -   IPv6: False
-2026-05-29 03:35:35,321 - INFO - Executing command: bgpq4 -b -l define CM_IPV4 AS9808
-2026-05-29 03:35:35,627 - INFO - Saved to: /__w/BGP-Auto/BGP-Auto/output/china3c/filters/CM_IPV4.conf
-2026-05-29 03:35:35,628 - INFO - 
+2026-05-30 03:23:58,480 - INFO -   AS Number: AS9808
+2026-05-30 03:23:58,480 - INFO -   IPv6: False
+2026-05-30 03:23:58,480 - INFO - Executing command: bgpq4 -b -l define CM_IPV4 AS9808
+2026-05-30 03:23:58,936 - INFO - Saved to: /__w/BGP-Auto/BGP-Auto/output/china3c/filters/CM_IPV4.conf
+2026-05-30 03:23:58,936 - INFO - 
 Processing: CT_IPV4
-2026-05-29 03:35:35,628 - INFO -   AS Number: AS4134
-2026-05-29 03:35:35,628 - INFO -   IPv6: False
-2026-05-29 03:35:35,628 - INFO - Executing command: bgpq4 -b -l define CT_IPV4 AS4134
-2026-05-29 03:35:35,822 - INFO - Saved to: /__w/BGP-Auto/BGP-Auto/output/china3c/filters/CT_IPV4.conf
-2026-05-29 03:35:35,822 - INFO - 
+2026-05-30 03:23:58,936 - INFO -   AS Number: AS4134
+2026-05-30 03:23:58,936 - INFO -   IPv6: False
+2026-05-30 03:23:58,937 - INFO - Executing command: bgpq4 -b -l define CT_IPV4 AS4134
+2026-05-30 03:23:59,280 - INFO - Saved to: /__w/BGP-Auto/BGP-Auto/output/china3c/filters/CT_IPV4.conf
+2026-05-30 03:23:59,280 - INFO - 
 Processing: CT_IPV6
-2026-05-29 03:35:35,822 - INFO -   AS Number: AS4134
-2026-05-29 03:35:35,822 - INFO -   IPv6: True
-2026-05-29 03:35:35,822 - INFO - Executing command: bgpq4 -6 -b -l define CT_IPV6 AS4134
-2026-05-29 03:35:36,041 - INFO - Saved to: /__w/BGP-Auto/BGP-Auto/output/china3c/filters/CT_IPV6.conf
-2026-05-29 03:35:36,041 - INFO - 
+2026-05-30 03:23:59,280 - INFO -   AS Number: AS4134
+2026-05-30 03:23:59,281 - INFO -   IPv6: True
+2026-05-30 03:23:59,281 - INFO - Executing command: bgpq4 -6 -b -l define CT_IPV6 AS4134
+2026-05-30 03:23:59,620 - INFO - Saved to: /__w/BGP-Auto/BGP-Auto/output/china3c/filters/CT_IPV6.conf
+2026-05-30 03:23:59,621 - INFO - 
 Processing: CU_IPV4
-2026-05-29 03:35:36,041 - INFO -   AS Number: AS4837
-2026-05-29 03:35:36,041 - INFO -   IPv6: False
-2026-05-29 03:35:36,041 - INFO - Executing command: bgpq4 -b -l define CU_IPV4 AS4837
-2026-05-29 03:35:36,215 - INFO - Saved to: /__w/BGP-Auto/BGP-Auto/output/china3c/filters/CU_IPV4.conf
-2026-05-29 03:35:36,215 - INFO - 
+2026-05-30 03:23:59,621 - INFO -   AS Number: AS4837
+2026-05-30 03:23:59,621 - INFO -   IPv6: False
+2026-05-30 03:23:59,621 - INFO - Executing command: bgpq4 -b -l define CU_IPV4 AS4837
+2026-05-30 03:23:59,915 - INFO - Saved to: /__w/BGP-Auto/BGP-Auto/output/china3c/filters/CU_IPV4.conf
+2026-05-30 03:23:59,915 - INFO - 
 Processing: CU_IPV6
-2026-05-29 03:35:36,215 - INFO -   AS Number: AS4837
-2026-05-29 03:35:36,215 - INFO -   IPv6: True
-2026-05-29 03:35:36,215 - INFO - Executing command: bgpq4 -6 -b -l define CU_IPV6 AS4837
-2026-05-29 03:35:36,454 - INFO - Saved to: /__w/BGP-Auto/BGP-Auto/output/china3c/filters/CU_IPV6.conf
-2026-05-29 03:35:36,454 - INFO - 
+2026-05-30 03:23:59,915 - INFO -   AS Number: AS4837
+2026-05-30 03:23:59,915 - INFO -   IPv6: True
+2026-05-30 03:23:59,915 - INFO - Executing command: bgpq4 -6 -b -l define CU_IPV6 AS4837
+2026-05-30 03:24:00,224 - INFO - Saved to: /__w/BGP-Auto/BGP-Auto/output/china3c/filters/CU_IPV6.conf
+2026-05-30 03:24:00,224 - INFO - 
 Processing: ALL
-2026-05-29 03:35:36,454 - INFO -   IPv6 List: REJECTED_PREFIXES_V6
-2026-05-29 03:35:36,455 - INFO -   IPv4 List: REJECTED_PREFIXES_V4
-2026-05-29 03:35:36,504 - INFO - Saved to: /__w/BGP-Auto/BGP-Auto/output/china3c/all.conf
-2026-05-29 03:35:36,504 - INFO - 
+2026-05-30 03:24:00,224 - INFO -   IPv6 List: REJECTED_PREFIXES_V6
+2026-05-30 03:24:00,224 - INFO -   IPv4 List: REJECTED_PREFIXES_V4
+2026-05-30 03:24:00,274 - INFO - Saved to: /__w/BGP-Auto/BGP-Auto/output/china3c/all.conf
+2026-05-30 03:24:00,274 - INFO - 
 Merging 6 file(s)...
-2026-05-29 03:35:36,505 - INFO - Merged to: /__w/BGP-Auto/BGP-Auto/output/china3c/filtersprefix.conf
-2026-05-29 03:35:36,505 - INFO - ✓ Config file china3c.toml processed successfully
-2026-05-29 03:35:36,505 - INFO - 
+2026-05-30 03:24:00,275 - INFO - Merged to: /__w/BGP-Auto/BGP-Auto/output/china3c/filtersprefix.conf
+2026-05-30 03:24:00,275 - INFO - ✓ Config file china3c.toml processed successfully
+2026-05-30 03:24:00,275 - INFO - 
 Generating HTML report...
-2026-05-29 03:35:36,511 - INFO - HTML detail page saved to: /__w/BGP-Auto/BGP-Auto/html/china3c_detail.html
-2026-05-29 03:35:36,511 - INFO - 
+2026-05-30 03:24:00,280 - INFO - HTML detail page saved to: /__w/BGP-Auto/BGP-Auto/html/china3c_detail.html
+2026-05-30 03:24:00,280 - INFO - 
 Generating route change diffs...
-2026-05-29 03:35:36,521 - WARNING - Failed to get git history for /__w/BGP-Auto/BGP-Auto/output/china3c/filters/CM_IPV6.conf: Command '['git', 'log', '-5', '--pretty=format:%H|%ai|%an|%s', '--', 'output/china3c/filters/CM_IPV6.conf']' returned non-zero exit status 128.
-2026-05-29 03:35:36,540 - WARNING - Failed to get git history for /__w/BGP-Auto/BGP-Auto/output/china3c/filters/CM_IPV4.conf: Command '['git', 'log', '-5', '--pretty=format:%H|%ai|%an|%s', '--', 'output/china3c/filters/CM_IPV4.conf']' returned non-zero exit status 128.
-2026-05-29 03:35:36,549 - WARNING - Failed to get git history for /__w/BGP-Auto/BGP-Auto/output/china3c/filters/CT_IPV4.conf: Command '['git', 'log', '-5', '--pretty=format:%H|%ai|%an|%s', '--', 'output/china3c/filters/CT_IPV4.conf']' returned non-zero exit status 128.
-2026-05-29 03:35:36,554 - WARNING - Failed to get git history for /__w/BGP-Auto/BGP-Auto/output/china3c/filters/CT_IPV6.conf: Command '['git', 'log', '-5', '--pretty=format:%H|%ai|%an|%s', '--', 'output/china3c/filters/CT_IPV6.conf']' returned non-zero exit status 128.
-2026-05-29 03:35:36,559 - WARNING - Failed to get git history for /__w/BGP-Auto/BGP-Auto/output/china3c/filters/CU_IPV4.conf: Command '['git', 'log', '-5', '--pretty=format:%H|%ai|%an|%s', '--', 'output/china3c/filters/CU_IPV4.conf']' returned non-zero exit status 128.
-2026-05-29 03:35:36,562 - WARNING - Failed to get git history for /__w/BGP-Auto/BGP-Auto/output/china3c/filters/CU_IPV6.conf: Command '['git', 'log', '-5', '--pretty=format:%H|%ai|%an|%s', '--', 'output/china3c/filters/CU_IPV6.conf']' returned non-zero exit status 128.
-2026-05-29 03:35:36,601 - WARNING - Failed to get git history for /__w/BGP-Auto/BGP-Auto/output/china3c/filtersprefix.conf: Command '['git', 'log', '-5', '--pretty=format:%H|%ai|%an|%s', '--', 'output/china3c/filtersprefix.conf']' returned non-zero exit status 128.
-2026-05-29 03:35:36,603 - INFO - No git history found for china3c, skipping diff generation
-2026-05-29 03:35:36,605 - INFO - 
+2026-05-30 03:24:00,290 - WARNING - Failed to get git history for /__w/BGP-Auto/BGP-Auto/output/china3c/filters/CM_IPV6.conf: Command '['git', 'log', '-5', '--pretty=format:%H|%ai|%an|%s', '--', 'output/china3c/filters/CM_IPV6.conf']' returned non-zero exit status 128.
+2026-05-30 03:24:00,308 - WARNING - Failed to get git history for /__w/BGP-Auto/BGP-Auto/output/china3c/filters/CM_IPV4.conf: Command '['git', 'log', '-5', '--pretty=format:%H|%ai|%an|%s', '--', 'output/china3c/filters/CM_IPV4.conf']' returned non-zero exit status 128.
+2026-05-30 03:24:00,316 - WARNING - Failed to get git history for /__w/BGP-Auto/BGP-Auto/output/china3c/filters/CT_IPV4.conf: Command '['git', 'log', '-5', '--pretty=format:%H|%ai|%an|%s', '--', 'output/china3c/filters/CT_IPV4.conf']' returned non-zero exit status 128.
+2026-05-30 03:24:00,322 - WARNING - Failed to get git history for /__w/BGP-Auto/BGP-Auto/output/china3c/filters/CT_IPV6.conf: Command '['git', 'log', '-5', '--pretty=format:%H|%ai|%an|%s', '--', 'output/china3c/filters/CT_IPV6.conf']' returned non-zero exit status 128.
+2026-05-30 03:24:00,326 - WARNING - Failed to get git history for /__w/BGP-Auto/BGP-Auto/output/china3c/filters/CU_IPV4.conf: Command '['git', 'log', '-5', '--pretty=format:%H|%ai|%an|%s', '--', 'output/china3c/filters/CU_IPV4.conf']' returned non-zero exit status 128.
+2026-05-30 03:24:00,329 - WARNING - Failed to get git history for /__w/BGP-Auto/BGP-Auto/output/china3c/filters/CU_IPV6.conf: Command '['git', 'log', '-5', '--pretty=format:%H|%ai|%an|%s', '--', 'output/china3c/filters/CU_IPV6.conf']' returned non-zero exit status 128.
+2026-05-30 03:24:00,367 - WARNING - Failed to get git history for /__w/BGP-Auto/BGP-Auto/output/china3c/filtersprefix.conf: Command '['git', 'log', '-5', '--pretty=format:%H|%ai|%an|%s', '--', 'output/china3c/filtersprefix.conf']' returned non-zero exit status 128.
+2026-05-30 03:24:00,369 - INFO - No git history found for china3c, skipping diff generation
+2026-05-30 03:24:00,370 - INFO - 
 ======================================================================
-2026-05-29 03:35:36,605 - INFO - Processing config file: as-pysio.toml
-2026-05-29 03:35:36,605 - INFO - ======================================================================
-2026-05-29 03:35:36,605 - INFO - Found 2 enabled section(s)
-2026-05-29 03:35:36,605 - INFO - 
+2026-05-30 03:24:00,370 - INFO - Processing config file: as-pysio.toml
+2026-05-30 03:24:00,370 - INFO - ======================================================================
+2026-05-30 03:24:00,371 - INFO - Found 2 enabled section(s)
+2026-05-30 03:24:00,371 - INFO - 
 Processing: DOWNSTREAM_PREFIX_AS_PYSIO_IPV6
-2026-05-29 03:35:36,605 - INFO -   AS Number: AS-PYSIO
-2026-05-29 03:35:36,605 - INFO -   IPv6: True
-2026-05-29 03:35:36,605 - INFO - Executing command: bgpq4 -6 -b -l define DOWNSTREAM_PREFIX_AS_PYSIO_IPV6 AS-PYSIO
-2026-05-29 03:35:36,878 - INFO - Saved to: /__w/BGP-Auto/BGP-Auto/output/as-pysio/filters/DOWNSTREAM_PREFIX_AS_PYSIO_IPV6.conf
-2026-05-29 03:35:36,879 - INFO - 
+2026-05-30 03:24:00,371 - INFO -   AS Number: AS-PYSIO
+2026-05-30 03:24:00,371 - INFO -   IPv6: True
+2026-05-30 03:24:00,371 - INFO - Executing command: bgpq4 -6 -b -l define DOWNSTREAM_PREFIX_AS_PYSIO_IPV6 AS-PYSIO
+2026-05-30 03:24:00,784 - INFO - Saved to: /__w/BGP-Auto/BGP-Auto/output/as-pysio/filters/DOWNSTREAM_PREFIX_AS_PYSIO_IPV6.conf
+2026-05-30 03:24:00,784 - INFO - 
 Processing: DOWNSTREAM_PREFIX_AS_PYSIO_IPV4
-2026-05-29 03:35:36,879 - INFO -   AS Number: AS-PYSIO
-2026-05-29 03:35:36,879 - INFO -   IPv6: False
-2026-05-29 03:35:36,879 - INFO - Executing command: bgpq4 -b -l define DOWNSTREAM_PREFIX_AS_PYSIO_IPV4 AS-PYSIO
-2026-05-29 03:35:37,075 - INFO - Saved to: /__w/BGP-Auto/BGP-Auto/output/as-pysio/filters/DOWNSTREAM_PREFIX_AS_PYSIO_IPV4.conf
-2026-05-29 03:35:37,075 - INFO - 
+2026-05-30 03:24:00,784 - INFO -   AS Number: AS-PYSIO
+2026-05-30 03:24:00,784 - INFO -   IPv6: False
+2026-05-30 03:24:00,785 - INFO - Executing command: bgpq4 -b -l define DOWNSTREAM_PREFIX_AS_PYSIO_IPV4 AS-PYSIO
+2026-05-30 03:24:01,079 - INFO - Saved to: /__w/BGP-Auto/BGP-Auto/output/as-pysio/filters/DOWNSTREAM_PREFIX_AS_PYSIO_IPV4.conf
+2026-05-30 03:24:01,079 - INFO - 
 Merging 2 file(s)...
-2026-05-29 03:35:37,075 - INFO - Merged to: /__w/BGP-Auto/BGP-Auto/output/as-pysio/filtersprefix.conf
-2026-05-29 03:35:37,075 - INFO - ✓ Config file as-pysio.toml processed successfully
-2026-05-29 03:35:37,075 - INFO - 
+2026-05-30 03:24:01,079 - INFO - Merged to: /__w/BGP-Auto/BGP-Auto/output/as-pysio/filtersprefix.conf
+2026-05-30 03:24:01,079 - INFO - ✓ Config file as-pysio.toml processed successfully
+2026-05-30 03:24:01,079 - INFO - 
 Generating HTML report...
-2026-05-29 03:35:37,076 - INFO - HTML detail page saved to: /__w/BGP-Auto/BGP-Auto/html/as-pysio_detail.html
-2026-05-29 03:35:37,076 - INFO - 
+2026-05-30 03:24:01,081 - INFO - HTML detail page saved to: /__w/BGP-Auto/BGP-Auto/html/as-pysio_detail.html
+2026-05-30 03:24:01,081 - INFO - 
 Generating route change diffs...
-2026-05-29 03:35:37,088 - WARNING - Failed to get git history for /__w/BGP-Auto/BGP-Auto/output/as-pysio/filters/DOWNSTREAM_PREFIX_AS_PYSIO_IPV6.conf: Command '['git', 'log', '-5', '--pretty=format:%H|%ai|%an|%s', '--', 'output/as-pysio/filters/DOWNSTREAM_PREFIX_AS_PYSIO_IPV6.conf']' returned non-zero exit status 128.
-2026-05-29 03:35:37,091 - WARNING - Failed to get git history for /__w/BGP-Auto/BGP-Auto/output/as-pysio/filters/DOWNSTREAM_PREFIX_AS_PYSIO_IPV4.conf: Command '['git', 'log', '-5', '--pretty=format:%H|%ai|%an|%s', '--', 'output/as-pysio/filters/DOWNSTREAM_PREFIX_AS_PYSIO_IPV4.conf']' returned non-zero exit status 128.
-2026-05-29 03:35:37,102 - WARNING - Failed to get git history for /__w/BGP-Auto/BGP-Auto/output/as-pysio/filtersprefix.conf: Command '['git', 'log', '-5', '--pretty=format:%H|%ai|%an|%s', '--', 'output/as-pysio/filtersprefix.conf']' returned non-zero exit status 128.
-2026-05-29 03:35:37,103 - INFO - No git history found for as-pysio, skipping diff generation
-2026-05-29 03:35:37,103 - INFO - 
+2026-05-30 03:24:01,092 - WARNING - Failed to get git history for /__w/BGP-Auto/BGP-Auto/output/as-pysio/filters/DOWNSTREAM_PREFIX_AS_PYSIO_IPV6.conf: Command '['git', 'log', '-5', '--pretty=format:%H|%ai|%an|%s', '--', 'output/as-pysio/filters/DOWNSTREAM_PREFIX_AS_PYSIO_IPV6.conf']' returned non-zero exit status 128.
+2026-05-30 03:24:01,096 - WARNING - Failed to get git history for /__w/BGP-Auto/BGP-Auto/output/as-pysio/filters/DOWNSTREAM_PREFIX_AS_PYSIO_IPV4.conf: Command '['git', 'log', '-5', '--pretty=format:%H|%ai|%an|%s', '--', 'output/as-pysio/filters/DOWNSTREAM_PREFIX_AS_PYSIO_IPV4.conf']' returned non-zero exit status 128.
+2026-05-30 03:24:01,107 - WARNING - Failed to get git history for /__w/BGP-Auto/BGP-Auto/output/as-pysio/filtersprefix.conf: Command '['git', 'log', '-5', '--pretty=format:%H|%ai|%an|%s', '--', 'output/as-pysio/filtersprefix.conf']' returned non-zero exit status 128.
+2026-05-30 03:24:01,107 - INFO - No git history found for as-pysio, skipping diff generation
+2026-05-30 03:24:01,107 - INFO - 
 ======================================================================
-2026-05-29 03:35:37,103 - INFO - Processing config file: stuix.toml
-2026-05-29 03:35:37,103 - INFO - ======================================================================
-2026-05-29 03:35:37,103 - INFO - Found 12 enabled section(s)
-2026-05-29 03:35:37,103 - INFO - 
+2026-05-30 03:24:01,108 - INFO - Processing config file: stuix.toml
+2026-05-30 03:24:01,108 - INFO - ======================================================================
+2026-05-30 03:24:01,108 - INFO - Found 12 enabled section(s)
+2026-05-30 03:24:01,108 - INFO - 
 Processing: DOWNSTREAM_PREFIX_AS215172
-2026-05-29 03:35:37,104 - INFO -   AS Number: AS-JYL
-2026-05-29 03:35:37,104 - INFO -   IPv6: True
-2026-05-29 03:35:37,104 - INFO - Executing command: bgpq4 -6 -b -l define DOWNSTREAM_PREFIX_AS215172 AS-JYL
-2026-05-29 03:35:37,322 - INFO - Saved to: /__w/BGP-Auto/BGP-Auto/output/stuix/filters/DOWNSTREAM_PREFIX_AS215172.conf
-2026-05-29 03:35:37,322 - INFO - 
+2026-05-30 03:24:01,108 - INFO -   AS Number: AS-JYL
+2026-05-30 03:24:01,108 - INFO -   IPv6: True
+2026-05-30 03:24:01,108 - INFO - Executing command: bgpq4 -6 -b -l define DOWNSTREAM_PREFIX_AS215172 AS-JYL
+2026-05-30 03:24:01,444 - INFO - Saved to: /__w/BGP-Auto/BGP-Auto/output/stuix/filters/DOWNSTREAM_PREFIX_AS215172.conf
+2026-05-30 03:24:01,444 - INFO - 
 Processing: DOWNSTREAM_PREFIX_AS215172_IPV4
-2026-05-29 03:35:37,322 - INFO -   AS Number: AS-JYL
-2026-05-29 03:35:37,322 - INFO -   IPv6: False
-2026-05-29 03:35:37,322 - INFO - Executing command: bgpq4 -b -l define DOWNSTREAM_PREFIX_AS215172_IPV4 AS-JYL
-2026-05-29 03:35:37,494 - INFO - Saved to: /__w/BGP-Auto/BGP-Auto/output/stuix/filters/DOWNSTREAM_PREFIX_AS215172_IPV4.conf
-2026-05-29 03:35:37,495 - INFO - 
+2026-05-30 03:24:01,445 - INFO -   AS Number: AS-JYL
+2026-05-30 03:24:01,445 - INFO -   IPv6: False
+2026-05-30 03:24:01,445 - INFO - Executing command: bgpq4 -b -l define DOWNSTREAM_PREFIX_AS215172_IPV4 AS-JYL
+2026-05-30 03:24:01,742 - INFO - Saved to: /__w/BGP-Auto/BGP-Auto/output/stuix/filters/DOWNSTREAM_PREFIX_AS215172_IPV4.conf
+2026-05-30 03:24:01,742 - INFO - 
 Processing: DOWNSTREAM_PREFIX_AS211729
-2026-05-29 03:35:37,495 - INFO -   AS Number: AS211729
-2026-05-29 03:35:37,495 - INFO -   IPv6: True
-2026-05-29 03:35:37,495 - INFO - Executing command: bgpq4 -6 -b -l define DOWNSTREAM_PREFIX_AS211729 AS211729
-2026-05-29 03:35:37,647 - INFO - Saved to: /__w/BGP-Auto/BGP-Auto/output/stuix/filters/DOWNSTREAM_PREFIX_AS211729.conf
-2026-05-29 03:35:37,647 - INFO - 
+2026-05-30 03:24:01,742 - INFO -   AS Number: AS211729
+2026-05-30 03:24:01,742 - INFO -   IPv6: True
+2026-05-30 03:24:01,742 - INFO - Executing command: bgpq4 -6 -b -l define DOWNSTREAM_PREFIX_AS211729 AS211729
+2026-05-30 03:24:01,997 - INFO - Saved to: /__w/BGP-Auto/BGP-Auto/output/stuix/filters/DOWNSTREAM_PREFIX_AS211729.conf
+2026-05-30 03:24:01,997 - INFO - 
 Processing: DOWNSTREAM_PREFIX_AS12198
-2026-05-29 03:35:37,647 - INFO -   AS Number: AS-JSMSR
-2026-05-29 03:35:37,647 - INFO -   IPv6: True
-2026-05-29 03:35:37,647 - INFO - Executing command: bgpq4 -6 -b -l define DOWNSTREAM_PREFIX_AS12198 AS-JSMSR
-2026-05-29 03:35:37,817 - INFO - Saved to: /__w/BGP-Auto/BGP-Auto/output/stuix/filters/DOWNSTREAM_PREFIX_AS12198.conf
-2026-05-29 03:35:37,817 - INFO - 
+2026-05-30 03:24:01,997 - INFO -   AS Number: AS-JSMSR
+2026-05-30 03:24:01,997 - INFO -   IPv6: True
+2026-05-30 03:24:01,997 - INFO - Executing command: bgpq4 -6 -b -l define DOWNSTREAM_PREFIX_AS12198 AS-JSMSR
+2026-05-30 03:24:02,290 - INFO - Saved to: /__w/BGP-Auto/BGP-Auto/output/stuix/filters/DOWNSTREAM_PREFIX_AS12198.conf
+2026-05-30 03:24:02,290 - INFO - 
 Processing: DOWNSTREAM_PREFIX_AS210352
-2026-05-29 03:35:37,817 - INFO -   AS Number: AS210352
-2026-05-29 03:35:37,817 - INFO -   IPv6: True
-2026-05-29 03:35:37,817 - INFO - Executing command: bgpq4 -6 -b -l define DOWNSTREAM_PREFIX_AS210352 AS210352
-2026-05-29 03:35:38,056 - INFO - Saved to: /__w/BGP-Auto/BGP-Auto/output/stuix/filters/DOWNSTREAM_PREFIX_AS210352.conf
-2026-05-29 03:35:38,056 - INFO - 
+2026-05-30 03:24:02,290 - INFO -   AS Number: AS210352
+2026-05-30 03:24:02,290 - INFO -   IPv6: True
+2026-05-30 03:24:02,290 - INFO - Executing command: bgpq4 -6 -b -l define DOWNSTREAM_PREFIX_AS210352 AS210352
+2026-05-30 03:24:02,545 - INFO - Saved to: /__w/BGP-Auto/BGP-Auto/output/stuix/filters/DOWNSTREAM_PREFIX_AS210352.conf
+2026-05-30 03:24:02,545 - INFO - 
 Processing: DOWNSTREAM_PREFIX_AS204539_IPV4
-2026-05-29 03:35:38,056 - INFO -   AS Number: AS-AXIC
-2026-05-29 03:35:38,056 - INFO -   IPv6: False
-2026-05-29 03:35:38,056 - INFO - Executing command: bgpq4 -b -l define DOWNSTREAM_PREFIX_AS204539_IPV4 AS-AXIC
-2026-05-29 03:35:38,247 - INFO - Saved to: /__w/BGP-Auto/BGP-Auto/output/stuix/filters/DOWNSTREAM_PREFIX_AS204539_IPV4.conf
-2026-05-29 03:35:38,247 - INFO - 
+2026-05-30 03:24:02,545 - INFO -   AS Number: AS-AXIC
+2026-05-30 03:24:02,545 - INFO -   IPv6: False
+2026-05-30 03:24:02,545 - INFO - Executing command: bgpq4 -b -l define DOWNSTREAM_PREFIX_AS204539_IPV4 AS-AXIC
+2026-05-30 03:24:02,838 - INFO - Saved to: /__w/BGP-Auto/BGP-Auto/output/stuix/filters/DOWNSTREAM_PREFIX_AS204539_IPV4.conf
+2026-05-30 03:24:02,838 - INFO - 
 Processing: DOWNSTREAM_PREFIX_AS204539_IPV46
-2026-05-29 03:35:38,247 - INFO -   AS Number: AS-AXIC
-2026-05-29 03:35:38,247 - INFO -   IPv6: True
-2026-05-29 03:35:38,247 - INFO - Executing command: bgpq4 -6 -b -l define DOWNSTREAM_PREFIX_AS204539_IPV46 AS-AXIC
-2026-05-29 03:35:38,556 - INFO - Saved to: /__w/BGP-Auto/BGP-Auto/output/stuix/filters/DOWNSTREAM_PREFIX_AS204539_IPV46.conf
-2026-05-29 03:35:38,556 - INFO - 
+2026-05-30 03:24:02,838 - INFO -   AS Number: AS-AXIC
+2026-05-30 03:24:02,838 - INFO -   IPv6: True
+2026-05-30 03:24:02,838 - INFO - Executing command: bgpq4 -6 -b -l define DOWNSTREAM_PREFIX_AS204539_IPV46 AS-AXIC
+2026-05-30 03:24:03,169 - INFO - Saved to: /__w/BGP-Auto/BGP-Auto/output/stuix/filters/DOWNSTREAM_PREFIX_AS204539_IPV46.conf
+2026-05-30 03:24:03,170 - INFO - 
 Processing: DOWNSTREAM_PREFIX_AS140915
-2026-05-29 03:35:38,556 - INFO -   AS Number: AS140915:AS-MKNT
-2026-05-29 03:35:38,557 - INFO -   IPv6: True
-2026-05-29 03:35:38,557 - INFO - Executing command: bgpq4 -6 -b -l define DOWNSTREAM_PREFIX_AS140915 AS140915:AS-MKNT
-2026-05-29 03:35:38,753 - INFO - Saved to: /__w/BGP-Auto/BGP-Auto/output/stuix/filters/DOWNSTREAM_PREFIX_AS140915.conf
-2026-05-29 03:35:38,753 - INFO - 
+2026-05-30 03:24:03,170 - INFO -   AS Number: AS140915:AS-MKNT
+2026-05-30 03:24:03,170 - INFO -   IPv6: True
+2026-05-30 03:24:03,170 - INFO - Executing command: bgpq4 -6 -b -l define DOWNSTREAM_PREFIX_AS140915 AS140915:AS-MKNT
+2026-05-30 03:24:03,502 - INFO - Saved to: /__w/BGP-Auto/BGP-Auto/output/stuix/filters/DOWNSTREAM_PREFIX_AS140915.conf
+2026-05-30 03:24:03,502 - INFO - 
 Processing: DOWNSTREAM_PREFIX_AS216299
-2026-05-29 03:35:38,753 - INFO -   AS Number: AS216299
-2026-05-29 03:35:38,753 - INFO -   IPv6: True
-2026-05-29 03:35:38,753 - INFO - Executing command: bgpq4 -6 -b -l define DOWNSTREAM_PREFIX_AS216299 AS216299
-2026-05-29 03:35:38,903 - INFO - Saved to: /__w/BGP-Auto/BGP-Auto/output/stuix/filters/DOWNSTREAM_PREFIX_AS216299.conf
-2026-05-29 03:35:38,903 - INFO - 
+2026-05-30 03:24:03,502 - INFO -   AS Number: AS216299
+2026-05-30 03:24:03,502 - INFO -   IPv6: True
+2026-05-30 03:24:03,502 - INFO - Executing command: bgpq4 -6 -b -l define DOWNSTREAM_PREFIX_AS216299 AS216299
+2026-05-30 03:24:03,760 - INFO - Saved to: /__w/BGP-Auto/BGP-Auto/output/stuix/filters/DOWNSTREAM_PREFIX_AS216299.conf
+2026-05-30 03:24:03,760 - INFO - 
 Processing: DOWNSTREAM_PREFIX_AS154185
-2026-05-29 03:35:38,903 - INFO -   AS Number: AS154185
-2026-05-29 03:35:38,903 - INFO -   IPv6: True
-2026-05-29 03:35:38,903 - INFO - Executing command: bgpq4 -6 -b -l define DOWNSTREAM_PREFIX_AS154185 AS154185
-2026-05-29 03:35:39,070 - INFO - Saved to: /__w/BGP-Auto/BGP-Auto/output/stuix/filters/DOWNSTREAM_PREFIX_AS154185.conf
-2026-05-29 03:35:39,070 - INFO - 
+2026-05-30 03:24:03,760 - INFO -   AS Number: AS154185
+2026-05-30 03:24:03,760 - INFO -   IPv6: True
+2026-05-30 03:24:03,760 - INFO - Executing command: bgpq4 -6 -b -l define DOWNSTREAM_PREFIX_AS154185 AS154185
+2026-05-30 03:24:04,023 - INFO - Saved to: /__w/BGP-Auto/BGP-Auto/output/stuix/filters/DOWNSTREAM_PREFIX_AS154185.conf
+2026-05-30 03:24:04,023 - INFO - 
 Processing: DOWNSTREAM_PREFIX_AS208223_IPV4
-2026-05-29 03:35:39,070 - INFO -   AS Number: AS208223:AS-ALL
-2026-05-29 03:35:39,070 - INFO -   IPv6: False
-2026-05-29 03:35:39,070 - INFO - Executing command: bgpq4 -b -l define DOWNSTREAM_PREFIX_AS208223_IPV4 AS208223:AS-ALL
-2026-05-29 03:35:39,342 - INFO - Saved to: /__w/BGP-Auto/BGP-Auto/output/stuix/filters/DOWNSTREAM_PREFIX_AS208223_IPV4.conf
-2026-05-29 03:35:39,342 - INFO - 
+2026-05-30 03:24:04,023 - INFO -   AS Number: AS208223:AS-ALL
+2026-05-30 03:24:04,023 - INFO -   IPv6: False
+2026-05-30 03:24:04,023 - INFO - Executing command: bgpq4 -b -l define DOWNSTREAM_PREFIX_AS208223_IPV4 AS208223:AS-ALL
+2026-05-30 03:24:04,316 - INFO - Saved to: /__w/BGP-Auto/BGP-Auto/output/stuix/filters/DOWNSTREAM_PREFIX_AS208223_IPV4.conf
+2026-05-30 03:24:04,317 - INFO - 
 Processing: DOWNSTREAM_PREFIX_AS199794
-2026-05-29 03:35:39,342 - INFO -   AS Number: AS199794
-2026-05-29 03:35:39,342 - INFO -   IPv6: True
-2026-05-29 03:35:39,342 - INFO - Executing command: bgpq4 -6 -b -l define DOWNSTREAM_PREFIX_AS199794 AS199794
-2026-05-29 03:35:39,503 - INFO - Saved to: /__w/BGP-Auto/BGP-Auto/output/stuix/filters/DOWNSTREAM_PREFIX_AS199794.conf
-2026-05-29 03:35:39,503 - INFO - 
+2026-05-30 03:24:04,317 - INFO -   AS Number: AS199794
+2026-05-30 03:24:04,317 - INFO -   IPv6: True
+2026-05-30 03:24:04,317 - INFO - Executing command: bgpq4 -6 -b -l define DOWNSTREAM_PREFIX_AS199794 AS199794
+2026-05-30 03:24:04,572 - INFO - Saved to: /__w/BGP-Auto/BGP-Auto/output/stuix/filters/DOWNSTREAM_PREFIX_AS199794.conf
+2026-05-30 03:24:04,573 - INFO - 
 Merging 12 file(s)...
-2026-05-29 03:35:39,504 - INFO - Merged to: /__w/BGP-Auto/BGP-Auto/output/stuix/filtersprefix.conf
-2026-05-29 03:35:39,504 - INFO - ✓ Config file stuix.toml processed successfully
-2026-05-29 03:35:39,504 - INFO - 
+2026-05-30 03:24:04,573 - INFO - Merged to: /__w/BGP-Auto/BGP-Auto/output/stuix/filtersprefix.conf
+2026-05-30 03:24:04,573 - INFO - ✓ Config file stuix.toml processed successfully
+2026-05-30 03:24:04,574 - INFO - 
 Generating HTML report...
-2026-05-29 03:35:39,506 - INFO - HTML detail page saved to: /__w/BGP-Auto/BGP-Auto/html/stuix_detail.html
-2026-05-29 03:35:39,506 - INFO - 
+2026-05-30 03:24:04,576 - INFO - HTML detail page saved to: /__w/BGP-Auto/BGP-Auto/html/stuix_detail.html
+2026-05-30 03:24:04,576 - INFO - 
 Generating route change diffs...
-2026-05-29 03:35:39,511 - WARNING - Failed to get git history for /__w/BGP-Auto/BGP-Auto/output/stuix/filters/DOWNSTREAM_PREFIX_AS215172.conf: Command '['git', 'log', '-5', '--pretty=format:%H|%ai|%an|%s', '--', 'output/stuix/filters/DOWNSTREAM_PREFIX_AS215172.conf']' returned non-zero exit status 128.
-2026-05-29 03:35:39,514 - WARNING - Failed to get git history for /__w/BGP-Auto/BGP-Auto/output/stuix/filters/DOWNSTREAM_PREFIX_AS215172_IPV4.conf: Command '['git', 'log', '-5', '--pretty=format:%H|%ai|%an|%s', '--', 'output/stuix/filters/DOWNSTREAM_PREFIX_AS215172_IPV4.conf']' returned non-zero exit status 128.
-2026-05-29 03:35:39,516 - WARNING - Failed to get git history for /__w/BGP-Auto/BGP-Auto/output/stuix/filters/DOWNSTREAM_PREFIX_AS211729.conf: Command '['git', 'log', '-5', '--pretty=format:%H|%ai|%an|%s', '--', 'output/stuix/filters/DOWNSTREAM_PREFIX_AS211729.conf']' returned non-zero exit status 128.
-2026-05-29 03:35:39,519 - WARNING - Failed to get git history for /__w/BGP-Auto/BGP-Auto/output/stuix/filters/DOWNSTREAM_PREFIX_AS12198.conf: Command '['git', 'log', '-5', '--pretty=format:%H|%ai|%an|%s', '--', 'output/stuix/filters/DOWNSTREAM_PREFIX_AS12198.conf']' returned non-zero exit status 128.
-2026-05-29 03:35:39,522 - WARNING - Failed to get git history for /__w/BGP-Auto/BGP-Auto/output/stuix/filters/DOWNSTREAM_PREFIX_AS210352.conf: Command '['git', 'log', '-5', '--pretty=format:%H|%ai|%an|%s', '--', 'output/stuix/filters/DOWNSTREAM_PREFIX_AS210352.conf']' returned non-zero exit status 128.
-2026-05-29 03:35:39,524 - WARNING - Failed to get git history for /__w/BGP-Auto/BGP-Auto/output/stuix/filters/DOWNSTREAM_PREFIX_AS204539_IPV4.conf: Command '['git', 'log', '-5', '--pretty=format:%H|%ai|%an|%s', '--', 'output/stuix/filters/DOWNSTREAM_PREFIX_AS204539_IPV4.conf']' returned non-zero exit status 128.
-2026-05-29 03:35:39,528 - WARNING - Failed to get git history for /__w/BGP-Auto/BGP-Auto/output/stuix/filters/DOWNSTREAM_PREFIX_AS204539_IPV46.conf: Command '['git', 'log', '-5', '--pretty=format:%H|%ai|%an|%s', '--', 'output/stuix/filters/DOWNSTREAM_PREFIX_AS204539_IPV46.conf']' returned non-zero exit status 128.
-2026-05-29 03:35:39,533 - WARNING - Failed to get git history for /__w/BGP-Auto/BGP-Auto/output/stuix/filters/DOWNSTREAM_PREFIX_AS140915.conf: Command '['git', 'log', '-5', '--pretty=format:%H|%ai|%an|%s', '--', 'output/stuix/filters/DOWNSTREAM_PREFIX_AS140915.conf']' returned non-zero exit status 128.
-2026-05-29 03:35:39,536 - WARNING - Failed to get git history for /__w/BGP-Auto/BGP-Auto/output/stuix/filters/DOWNSTREAM_PREFIX_AS216299.conf: Command '['git', 'log', '-5', '--pretty=format:%H|%ai|%an|%s', '--', 'output/stuix/filters/DOWNSTREAM_PREFIX_AS216299.conf']' returned non-zero exit status 128.
-2026-05-29 03:35:39,538 - WARNING - Failed to get git history for /__w/BGP-Auto/BGP-Auto/output/stuix/filters/DOWNSTREAM_PREFIX_AS154185.conf: Command '['git', 'log', '-5', '--pretty=format:%H|%ai|%an|%s', '--', 'output/stuix/filters/DOWNSTREAM_PREFIX_AS154185.conf']' returned non-zero exit status 128.
-2026-05-29 03:35:39,541 - WARNING - Failed to get git history for /__w/BGP-Auto/BGP-Auto/output/stuix/filters/DOWNSTREAM_PREFIX_AS208223_IPV4.conf: Command '['git', 'log', '-5', '--pretty=format:%H|%ai|%an|%s', '--', 'output/stuix/filters/DOWNSTREAM_PREFIX_AS208223_IPV4.conf']' returned non-zero exit status 128.
-2026-05-29 03:35:39,543 - WARNING - Failed to get git history for /__w/BGP-Auto/BGP-Auto/output/stuix/filters/DOWNSTREAM_PREFIX_AS199794.conf: Command '['git', 'log', '-5', '--pretty=format:%H|%ai|%an|%s', '--', 'output/stuix/filters/DOWNSTREAM_PREFIX_AS199794.conf']' returned non-zero exit status 128.
-2026-05-29 03:35:39,551 - WARNING - Failed to get git history for /__w/BGP-Auto/BGP-Auto/output/stuix/filtersprefix.conf: Command '['git', 'log', '-5', '--pretty=format:%H|%ai|%an|%s', '--', 'output/stuix/filtersprefix.conf']' returned non-zero exit status 128.
-2026-05-29 03:35:39,552 - INFO - No git history found for stuix, skipping diff generation
-2026-05-29 03:35:39,552 - INFO - 
+2026-05-30 03:24:04,581 - WARNING - Failed to get git history for /__w/BGP-Auto/BGP-Auto/output/stuix/filters/DOWNSTREAM_PREFIX_AS215172.conf: Command '['git', 'log', '-5', '--pretty=format:%H|%ai|%an|%s', '--', 'output/stuix/filters/DOWNSTREAM_PREFIX_AS215172.conf']' returned non-zero exit status 128.
+2026-05-30 03:24:04,583 - WARNING - Failed to get git history for /__w/BGP-Auto/BGP-Auto/output/stuix/filters/DOWNSTREAM_PREFIX_AS215172_IPV4.conf: Command '['git', 'log', '-5', '--pretty=format:%H|%ai|%an|%s', '--', 'output/stuix/filters/DOWNSTREAM_PREFIX_AS215172_IPV4.conf']' returned non-zero exit status 128.
+2026-05-30 03:24:04,586 - WARNING - Failed to get git history for /__w/BGP-Auto/BGP-Auto/output/stuix/filters/DOWNSTREAM_PREFIX_AS211729.conf: Command '['git', 'log', '-5', '--pretty=format:%H|%ai|%an|%s', '--', 'output/stuix/filters/DOWNSTREAM_PREFIX_AS211729.conf']' returned non-zero exit status 128.
+2026-05-30 03:24:04,589 - WARNING - Failed to get git history for /__w/BGP-Auto/BGP-Auto/output/stuix/filters/DOWNSTREAM_PREFIX_AS12198.conf: Command '['git', 'log', '-5', '--pretty=format:%H|%ai|%an|%s', '--', 'output/stuix/filters/DOWNSTREAM_PREFIX_AS12198.conf']' returned non-zero exit status 128.
+2026-05-30 03:24:04,591 - WARNING - Failed to get git history for /__w/BGP-Auto/BGP-Auto/output/stuix/filters/DOWNSTREAM_PREFIX_AS210352.conf: Command '['git', 'log', '-5', '--pretty=format:%H|%ai|%an|%s', '--', 'output/stuix/filters/DOWNSTREAM_PREFIX_AS210352.conf']' returned non-zero exit status 128.
+2026-05-30 03:24:04,594 - WARNING - Failed to get git history for /__w/BGP-Auto/BGP-Auto/output/stuix/filters/DOWNSTREAM_PREFIX_AS204539_IPV4.conf: Command '['git', 'log', '-5', '--pretty=format:%H|%ai|%an|%s', '--', 'output/stuix/filters/DOWNSTREAM_PREFIX_AS204539_IPV4.conf']' returned non-zero exit status 128.
+2026-05-30 03:24:04,598 - WARNING - Failed to get git history for /__w/BGP-Auto/BGP-Auto/output/stuix/filters/DOWNSTREAM_PREFIX_AS204539_IPV46.conf: Command '['git', 'log', '-5', '--pretty=format:%H|%ai|%an|%s', '--', 'output/stuix/filters/DOWNSTREAM_PREFIX_AS204539_IPV46.conf']' returned non-zero exit status 128.
+2026-05-30 03:24:04,602 - WARNING - Failed to get git history for /__w/BGP-Auto/BGP-Auto/output/stuix/filters/DOWNSTREAM_PREFIX_AS140915.conf: Command '['git', 'log', '-5', '--pretty=format:%H|%ai|%an|%s', '--', 'output/stuix/filters/DOWNSTREAM_PREFIX_AS140915.conf']' returned non-zero exit status 128.
+2026-05-30 03:24:04,605 - WARNING - Failed to get git history for /__w/BGP-Auto/BGP-Auto/output/stuix/filters/DOWNSTREAM_PREFIX_AS216299.conf: Command '['git', 'log', '-5', '--pretty=format:%H|%ai|%an|%s', '--', 'output/stuix/filters/DOWNSTREAM_PREFIX_AS216299.conf']' returned non-zero exit status 128.
+2026-05-30 03:24:04,608 - WARNING - Failed to get git history for /__w/BGP-Auto/BGP-Auto/output/stuix/filters/DOWNSTREAM_PREFIX_AS154185.conf: Command '['git', 'log', '-5', '--pretty=format:%H|%ai|%an|%s', '--', 'output/stuix/filters/DOWNSTREAM_PREFIX_AS154185.conf']' returned non-zero exit status 128.
+2026-05-30 03:24:04,610 - WARNING - Failed to get git history for /__w/BGP-Auto/BGP-Auto/output/stuix/filters/DOWNSTREAM_PREFIX_AS208223_IPV4.conf: Command '['git', 'log', '-5', '--pretty=format:%H|%ai|%an|%s', '--', 'output/stuix/filters/DOWNSTREAM_PREFIX_AS208223_IPV4.conf']' returned non-zero exit status 128.
+2026-05-30 03:24:04,613 - WARNING - Failed to get git history for /__w/BGP-Auto/BGP-Auto/output/stuix/filters/DOWNSTREAM_PREFIX_AS199794.conf: Command '['git', 'log', '-5', '--pretty=format:%H|%ai|%an|%s', '--', 'output/stuix/filters/DOWNSTREAM_PREFIX_AS199794.conf']' returned non-zero exit status 128.
+2026-05-30 03:24:04,621 - WARNING - Failed to get git history for /__w/BGP-Auto/BGP-Auto/output/stuix/filtersprefix.conf: Command '['git', 'log', '-5', '--pretty=format:%H|%ai|%an|%s', '--', 'output/stuix/filtersprefix.conf']' returned non-zero exit status 128.
+2026-05-30 03:24:04,621 - INFO - No git history found for stuix, skipping diff generation
+2026-05-30 03:24:04,622 - INFO - 
 Generating main index page...
-2026-05-29 03:35:39,552 - INFO - Main index saved to: /__w/BGP-Auto/BGP-Auto/html/index.html
+2026-05-30 03:24:04,622 - INFO - Main index saved to: /__w/BGP-Auto/BGP-Auto/html/index.html
