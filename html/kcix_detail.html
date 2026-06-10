@@ -38,7 +38,7 @@
         </div>
 
         <h1>BGP Auto Configuration Report</h1>
-        <p><strong>Generated:</strong> 2026-06-09 03:29:47</p>
+        <p><strong>Generated:</strong> 2026-06-10 03:41:12</p>
         <p><strong>Configuration:</strong> kcix</p>
 
         <h2>Summary</h2>
@@ -88,16 +88,109 @@
 
         <h2>Generated Files</h2>
         <ul>
-            <li><a href="kcix_DOWNSTREAM_PREFIX_AS204539_IPV4_content.html">DOWNSTREAM_PREFIX_AS204539_IPV4.conf</a> <span style='color: #888;'>(4381 bytes)</span></li>
-<li><a href="kcix_DOWNSTREAM_PREFIX_AS204539_IPV46_content.html">DOWNSTREAM_PREFIX_AS204539_IPV46.conf</a> <span style='color: #888;'>(62960 bytes)</span></li>
+            <li><a href="kcix_DOWNSTREAM_PREFIX_AS204539_IPV4_content.html">DOWNSTREAM_PREFIX_AS204539_IPV4.conf</a> <span style='color: #888;'>(4321 bytes)</span></li>
+<li><a href="kcix_DOWNSTREAM_PREFIX_AS204539_IPV46_content.html">DOWNSTREAM_PREFIX_AS204539_IPV46.conf</a> <span style='color: #888;'>(63079 bytes)</span></li>
 
         </ul>
 
-        <p><strong>Merged File:</strong> <a href="kcix_merged_content.html">filtersprefix.conf</a> <span style='color: #888;'>(67658 bytes)</span></p>
+        <p><strong>Merged File:</strong> <a href="kcix_merged_content.html">filtersprefix.conf</a> <span style='color: #888;'>(67717 bytes)</span></p>
 
         <h2>Logs</h2>
         <pre>
 <div>[INFO] Found 4 config file(s)</div>
+<div>[INFO] 
+======================================================================</div>
+<div>[INFO] Processing config file: as-pysio.toml</div>
+<div>[INFO] ======================================================================</div>
+<div>[INFO] Found 2 enabled section(s)</div>
+<div>[INFO] 
+Processing: DOWNSTREAM_PREFIX_AS_PYSIO_IPV6</div>
+<div>[INFO]   AS Number: AS-PYSIO</div>
+<div>[INFO]   IPv6: True</div>
+<div>[INFO] Executing command: bgpq4 -6 -b -l define DOWNSTREAM_PREFIX_AS_PYSIO_IPV6 AS-PYSIO</div>
+<div>[INFO] Saved to: /__w/BGP-Auto/BGP-Auto/output/as-pysio/filters/DOWNSTREAM_PREFIX_AS_PYSIO_IPV6.conf</div>
+<div>[INFO] 
+Processing: DOWNSTREAM_PREFIX_AS_PYSIO_IPV4</div>
+<div>[INFO]   AS Number: AS-PYSIO</div>
+<div>[INFO]   IPv6: False</div>
+<div>[INFO] Executing command: bgpq4 -b -l define DOWNSTREAM_PREFIX_AS_PYSIO_IPV4 AS-PYSIO</div>
+<div>[INFO] Saved to: /__w/BGP-Auto/BGP-Auto/output/as-pysio/filters/DOWNSTREAM_PREFIX_AS_PYSIO_IPV4.conf</div>
+<div>[INFO] 
+Merging 2 file(s)...</div>
+<div>[INFO] Merged to: /__w/BGP-Auto/BGP-Auto/output/as-pysio/filtersprefix.conf</div>
+<div>[SUCCESS] ✓ Config file as-pysio.toml processed successfully</div>
+<div>[INFO] 
+Generating HTML report...</div>
+<div>[INFO] HTML detail page saved to: /__w/BGP-Auto/BGP-Auto/html/as-pysio_detail.html</div>
+<div>[INFO] 
+Generating route change diffs...</div>
+<div>[WARNING] Failed to get git history for /__w/BGP-Auto/BGP-Auto/output/as-pysio/filters/DOWNSTREAM_PREFIX_AS_PYSIO_IPV6.conf: Command '['git', 'log', '-5', '--pretty=format:%H|%ai|%an|%s', '--', 'output/as-pysio/filters/DOWNSTREAM_PREFIX_AS_PYSIO_IPV6.conf']' returned non-zero exit status 128.</div>
+<div>[WARNING] Failed to get git history for /__w/BGP-Auto/BGP-Auto/output/as-pysio/filters/DOWNSTREAM_PREFIX_AS_PYSIO_IPV4.conf: Command '['git', 'log', '-5', '--pretty=format:%H|%ai|%an|%s', '--', 'output/as-pysio/filters/DOWNSTREAM_PREFIX_AS_PYSIO_IPV4.conf']' returned non-zero exit status 128.</div>
+<div>[WARNING] Failed to get git history for /__w/BGP-Auto/BGP-Auto/output/as-pysio/filtersprefix.conf: Command '['git', 'log', '-5', '--pretty=format:%H|%ai|%an|%s', '--', 'output/as-pysio/filtersprefix.conf']' returned non-zero exit status 128.</div>
+<div>[INFO] No git history found for as-pysio, skipping diff generation</div>
+<div>[INFO] 
+======================================================================</div>
+<div>[INFO] Processing config file: china3c.toml</div>
+<div>[INFO] ======================================================================</div>
+<div>[INFO] Found 7 enabled section(s)</div>
+<div>[INFO] 
+Processing: CM_IPV6</div>
+<div>[INFO]   AS Number: AS9808</div>
+<div>[INFO]   IPv6: True</div>
+<div>[INFO] Executing command: bgpq4 -6 -b -l define CM_IPV6 AS9808</div>
+<div>[INFO] Saved to: /__w/BGP-Auto/BGP-Auto/output/china3c/filters/CM_IPV6.conf</div>
+<div>[INFO] 
+Processing: CM_IPV4</div>
+<div>[INFO]   AS Number: AS9808</div>
+<div>[INFO]   IPv6: False</div>
+<div>[INFO] Executing command: bgpq4 -b -l define CM_IPV4 AS9808</div>
+<div>[INFO] Saved to: /__w/BGP-Auto/BGP-Auto/output/china3c/filters/CM_IPV4.conf</div>
+<div>[INFO] 
+Processing: CT_IPV4</div>
+<div>[INFO]   AS Number: AS4134</div>
+<div>[INFO]   IPv6: False</div>
+<div>[INFO] Executing command: bgpq4 -b -l define CT_IPV4 AS4134</div>
+<div>[INFO] Saved to: /__w/BGP-Auto/BGP-Auto/output/china3c/filters/CT_IPV4.conf</div>
+<div>[INFO] 
+Processing: CT_IPV6</div>
+<div>[INFO]   AS Number: AS4134</div>
+<div>[INFO]   IPv6: True</div>
+<div>[INFO] Executing command: bgpq4 -6 -b -l define CT_IPV6 AS4134</div>
+<div>[INFO] Saved to: /__w/BGP-Auto/BGP-Auto/output/china3c/filters/CT_IPV6.conf</div>
+<div>[INFO] 
+Processing: CU_IPV4</div>
+<div>[INFO]   AS Number: AS4837</div>
+<div>[INFO]   IPv6: False</div>
+<div>[INFO] Executing command: bgpq4 -b -l define CU_IPV4 AS4837</div>
+<div>[INFO] Saved to: /__w/BGP-Auto/BGP-Auto/output/china3c/filters/CU_IPV4.conf</div>
+<div>[INFO] 
+Processing: CU_IPV6</div>
+<div>[INFO]   AS Number: AS4837</div>
+<div>[INFO]   IPv6: True</div>
+<div>[INFO] Executing command: bgpq4 -6 -b -l define CU_IPV6 AS4837</div>
+<div>[INFO] Saved to: /__w/BGP-Auto/BGP-Auto/output/china3c/filters/CU_IPV6.conf</div>
+<div>[INFO] 
+Processing: ALL</div>
+<div>[INFO]   IPv6 List: REJECTED_PREFIXES_V6</div>
+<div>[INFO]   IPv4 List: REJECTED_PREFIXES_V4</div>
+<div>[INFO] Saved to: /__w/BGP-Auto/BGP-Auto/output/china3c/all.conf</div>
+<div>[INFO] 
+Merging 6 file(s)...</div>
+<div>[INFO] Merged to: /__w/BGP-Auto/BGP-Auto/output/china3c/filtersprefix.conf</div>
+<div>[SUCCESS] ✓ Config file china3c.toml processed successfully</div>
+<div>[INFO] 
+Generating HTML report...</div>
+<div>[INFO] HTML detail page saved to: /__w/BGP-Auto/BGP-Auto/html/china3c_detail.html</div>
+<div>[INFO] 
+Generating route change diffs...</div>
+<div>[WARNING] Failed to get git history for /__w/BGP-Auto/BGP-Auto/output/china3c/filters/CM_IPV6.conf: Command '['git', 'log', '-5', '--pretty=format:%H|%ai|%an|%s', '--', 'output/china3c/filters/CM_IPV6.conf']' returned non-zero exit status 128.</div>
+<div>[WARNING] Failed to get git history for /__w/BGP-Auto/BGP-Auto/output/china3c/filters/CM_IPV4.conf: Command '['git', 'log', '-5', '--pretty=format:%H|%ai|%an|%s', '--', 'output/china3c/filters/CM_IPV4.conf']' returned non-zero exit status 128.</div>
+<div>[WARNING] Failed to get git history for /__w/BGP-Auto/BGP-Auto/output/china3c/filters/CT_IPV4.conf: Command '['git', 'log', '-5', '--pretty=format:%H|%ai|%an|%s', '--', 'output/china3c/filters/CT_IPV4.conf']' returned non-zero exit status 128.</div>
+<div>[WARNING] Failed to get git history for /__w/BGP-Auto/BGP-Auto/output/china3c/filters/CT_IPV6.conf: Command '['git', 'log', '-5', '--pretty=format:%H|%ai|%an|%s', '--', 'output/china3c/filters/CT_IPV6.conf']' returned non-zero exit status 128.</div>
+<div>[WARNING] Failed to get git history for /__w/BGP-Auto/BGP-Auto/output/china3c/filters/CU_IPV4.conf: Command '['git', 'log', '-5', '--pretty=format:%H|%ai|%an|%s', '--', 'output/china3c/filters/CU_IPV4.conf']' returned non-zero exit status 128.</div>
+<div>[WARNING] Failed to get git history for /__w/BGP-Auto/BGP-Auto/output/china3c/filters/CU_IPV6.conf: Command '['git', 'log', '-5', '--pretty=format:%H|%ai|%an|%s', '--', 'output/china3c/filters/CU_IPV6.conf']' returned non-zero exit status 128.</div>
+<div>[WARNING] Failed to get git history for /__w/BGP-Auto/BGP-Auto/output/china3c/filtersprefix.conf: Command '['git', 'log', '-5', '--pretty=format:%H|%ai|%an|%s', '--', 'output/china3c/filtersprefix.conf']' returned non-zero exit status 128.</div>
+<div>[INFO] No git history found for china3c, skipping diff generation</div>
 <div>[INFO] 
 ======================================================================</div>
 <div>[INFO] Processing config file: kcix.toml</div>
